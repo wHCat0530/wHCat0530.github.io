@@ -153,7 +153,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B10/">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B07/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -167,7 +167,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B10/" class="post-title-link" itemprop="url">Python基础语法案例10</a>
+            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B07/" class="post-title-link" itemprop="url">Python基础语法案例07</a>
         </h2>
 
         <div class="post-meta">
@@ -178,7 +178,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:37:55" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:36:29" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
             </span>
 
           <br>
@@ -187,7 +187,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>212</span>
+              <span>347</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -206,7 +206,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h5 id="定义一个函数用来计算长方体的表面积和体积"><a href="#定义一个函数用来计算长方体的表面积和体积" class="headerlink" title="定义一个函数用来计算长方体的表面积和体积"></a>定义一个函数用来计算长方体的表面积和体积</h5><h5 id="函数的输入参数为长L，宽K和高H，返回结果为表面积S和体积V"><a href="#函数的输入参数为长L，宽K和高H，返回结果为表面积S和体积V" class="headerlink" title="函数的输入参数为长L，宽K和高H，返回结果为表面积S和体积V"></a>函数的输入参数为长L，宽K和高H，返回结果为表面积S和体积V</h5><h5 id="调用定义的函数计算长宽高分别为1，2，3的长方体，并返回计算结果t"><a href="#调用定义的函数计算长宽高分别为1，2，3的长方体，并返回计算结果t" class="headerlink" title="调用定义的函数计算长宽高分别为1，2，3的长方体，并返回计算结果t"></a>调用定义的函数计算长宽高分别为1，2，3的长方体，并返回计算结果t</h5><h5 id="在函数内作答"><a href="#在函数内作答" class="headerlink" title="在函数内作答"></a>在函数内作答</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">return_values</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test</span>(<span class="params">L,K,H</span>):</span><br><span class="line">        S=L*K*<span class="number">2</span>+K*H*<span class="number">2</span>+L*H*<span class="number">2</span></span><br><span class="line">        V=L*K*H</span><br><span class="line">        <span class="keyword">return</span>(S,V)</span><br><span class="line">    t=test(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">    <span class="keyword">return</span>(t)</span><br><span class="line"><span class="built_in">print</span>(return_values())</span><br></pre></td></tr></table></figure>
+          <h5 id="编写一段程序代码，利用条件语句实现成绩的分级，其中90-100为优秀，80-89为良好，70-79为中等，60-69为及格，0-59为不及格"><a href="#编写一段程序代码，利用条件语句实现成绩的分级，其中90-100为优秀，80-89为良好，70-79为中等，60-69为及格，0-59为不及格" class="headerlink" title="编写一段程序代码，利用条件语句实现成绩的分级，其中90-100为优秀，80-89为良好，70-79为中等，60-69为及格，0-59为不及格"></a>编写一段程序代码，利用条件语句实现成绩的分级，其中90-100为优秀，80-89为良好，70-79为中等，60-69为及格，0-59为不及格</h5><h5 id="现在有成绩为85分，请输出成绩等级"><a href="#现在有成绩为85分，请输出成绩等级" class="headerlink" title="现在有成绩为85分，请输出成绩等级"></a>现在有成绩为85分，请输出成绩等级</h5><h5 id="在函数内编写程序"><a href="#在函数内编写程序" class="headerlink" title="在函数内编写程序"></a>在函数内编写程序</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">t=<span class="number">85</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">return_values</span>():</span><br><span class="line">    t=<span class="number">85</span></span><br><span class="line">    <span class="keyword">if</span> t&gt;=<span class="number">90</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;优秀&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> t&gt;=<span class="number">80</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;良好&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> t&gt;=<span class="number">70</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;中等&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> t&gt;=<span class="number">60</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;及格&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;不及格&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(return_values())</span><br></pre></td></tr></table></figure>
 
 
       
@@ -524,15 +524,6 @@
       </span>
       <span class="links-of-author-item">
         <a href="mailto:wHCat0530@gmail.com" title="E-Mail → mailto:wHCat0530@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://space.bilibili.com/4893099?spm_id_from=333.1007.0.0" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;4893099?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://www.zhihu.com/people/xi-gong-liang-mao" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;xi-gong-liang-mao" rel="noopener" target="_blank"><i class="fab fa-知乎 fa-fw"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://tieba.baidu.com/home/main?id=tb.1.8afe46ca.Tf8JUSAFTiy6dlQ7JSzOJA&fr=userbar" title="百度贴吧 → https:&#x2F;&#x2F;tieba.baidu.com&#x2F;home&#x2F;main?id&#x3D;tb.1.8afe46ca.Tf8JUSAFTiy6dlQ7JSzOJA&amp;fr&#x3D;userbar" rel="noopener" target="_blank"><i class="fab fa-百度贴吧 fa-fw"></i></a>
       </span>
   </div>
   <div class="cc-license motion-element" itemprop="license">
