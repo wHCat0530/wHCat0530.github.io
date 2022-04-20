@@ -153,7 +153,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/python01/">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/LeetCode%E7%AE%97%E6%B3%95_%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -167,7 +167,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/04/20/python01/" class="post-title-link" itemprop="url">Python基础语法</a>
+            <a href="/2022/04/20/LeetCode%E7%AE%97%E6%B3%95_%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB/" class="post-title-link" itemprop="url">LeetCode算法_字符的最短距离</a>
         </h2>
 
         <div class="post-meta">
@@ -178,7 +178,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-04-20 14:21:07 / 修改时间：14:22:19" itemprop="dateCreated datePublished" datetime="2022-04-20T14:21:07+08:00">2022-04-20</time>
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:48:26" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
             </span>
 
           <br>
@@ -187,14 +187,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.8k</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -206,147 +206,113 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">n1 = <span class="number">2</span>    <span class="comment"># 整形</span></span><br><span class="line">n2 = <span class="number">1.3</span>      <span class="comment"># 浮点型</span></span><br><span class="line">n3 = <span class="built_in">float</span>(<span class="number">2</span>)  <span class="comment"># 转换为浮点型</span></span><br><span class="line">t = <span class="literal">True</span>     <span class="comment"># 布尔真</span></span><br><span class="line">f = <span class="literal">False</span>    <span class="comment"># 布尔假</span></span><br><span class="line">n4 = t == <span class="number">1</span></span><br><span class="line">n5 = f == <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="字符串的定义"><a href="#字符串的定义" class="headerlink" title="字符串的定义"></a>字符串的定义</h3><h5 id="字符串中的字符可以含有数值，ASCII字符，各种符号，可以有单，三引号括起来表示"><a href="#字符串中的字符可以含有数值，ASCII字符，各种符号，可以有单，三引号括起来表示" class="headerlink" title="字符串中的字符可以含有数值，ASCII字符，各种符号，可以有单，三引号括起来表示"></a>字符串中的字符可以含有数值，ASCII字符，各种符号，可以有单，三引号括起来表示</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1 = <span class="string">&#x27;1234&#x27;</span></span><br><span class="line">s2 = <span class="string">&#x27;&#x27;&#x27;hello world!&#x27;&#x27;&#x27;</span></span><br><span class="line">s3 = <span class="string">&#x27;I Like Python&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="列表的定义"><a href="#列表的定义" class="headerlink" title="列表的定义"></a>列表的定义</h3><h5 id="可以存放不同类型的数据，用中括号括起来进行定义"><a href="#可以存放不同类型的数据，用中括号括起来进行定义" class="headerlink" title="可以存放不同类型的数据，用中括号括起来进行定义"></a>可以存放不同类型的数据，用中括号括起来进行定义</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">L2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;HE&#x27;</span>, <span class="number">3</span>, <span class="number">5</span>]</span><br><span class="line">L3 = [<span class="string">&#x27;KJ&#x27;</span>, <span class="string">&#x27;CK&#x27;</span>, <span class="string">&#x27;HELLO&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="元组的定义"><a href="#元组的定义" class="headerlink" title="元组的定义"></a>元组的定义</h3><h5 id="与列表相似，是一种常用的数据结构，元组中的元素不能修改，元组采用圆括号括起来进行定义"><a href="#与列表相似，是一种常用的数据结构，元组中的元素不能修改，元组采用圆括号括起来进行定义" class="headerlink" title="与列表相似，是一种常用的数据结构，元组中的元素不能修改，元组采用圆括号括起来进行定义"></a>与列表相似，是一种常用的数据结构，元组中的元素不能修改，元组采用圆括号括起来进行定义</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">t1 = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>)</span><br><span class="line">t2 = (<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;kl&#x27;</span>)</span><br><span class="line">t3 = (<span class="string">&#x27;h1&#x27;</span>, <span class="string">&#x27;h2&#x27;</span>, <span class="string">&#x27;h3&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="集合的定义"><a href="#集合的定义" class="headerlink" title="集合的定义"></a>集合的定义</h3><h5 id="是一种不重复元素的序列，用大括号括起来进行定义"><a href="#是一种不重复元素的序列，用大括号括起来进行定义" class="headerlink" title="是一种不重复元素的序列，用大括号括起来进行定义"></a>是一种不重复元素的序列，用大括号括起来进行定义</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">J1 = &#123;<span class="number">1</span>, <span class="string">&#x27;h&#x27;</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>&#125;</span><br><span class="line">J2 = &#123;<span class="number">1</span>, <span class="string">&#x27;h&#x27;</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">2</span>&#125;</span><br><span class="line">J3 = &#123;<span class="string">&#x27;KR&#x27;</span>, <span class="string">&#x27;LY&#x27;</span>, <span class="string">&#x27;SE&#x27;</span>&#125;</span><br><span class="line">J4 = &#123;<span class="string">&#x27;KR&#x27;</span>, <span class="string">&#x27;LY&#x27;</span>, <span class="string">&#x27;SE&#x27;</span>, <span class="string">&#x27;SE&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;J1=%s&quot;</span> % (J1))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;J2=%s&quot;</span> % (J2))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;J3=%s&quot;</span> % (J3))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;J4=%s&quot;</span> % (J4))</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="字典的定义"><a href="#字典的定义" class="headerlink" title="字典的定义"></a>字典的定义</h3><h5 id="由键值对组成，键必须唯一但是值不一定唯一，字典用大括号括起来进行定义"><a href="#由键值对组成，键必须唯一但是值不一定唯一，字典用大括号括起来进行定义" class="headerlink" title="由键值对组成，键必须唯一但是值不一定唯一，字典用大括号括起来进行定义"></a>由键值对组成，键必须唯一但是值不一定唯一，字典用大括号括起来进行定义</h5><h5 id="其中字典中的元素是值和键组成，其中键在前值在后，键和值之间用冒号-进行区分，元素之间用逗号隔开"><a href="#其中字典中的元素是值和键组成，其中键在前值在后，键和值之间用冒号-进行区分，元素之间用逗号隔开" class="headerlink" title="其中字典中的元素是值和键组成，其中键在前值在后，键和值之间用冒号(:)进行区分，元素之间用逗号隔开"></a>其中字典中的元素是值和键组成，其中键在前值在后，键和值之间用冒号(:)进行区分，元素之间用逗号隔开</h5><h5 id="键可以是数值，字符，"><a href="#键可以是数值，字符，" class="headerlink" title="键可以是数值，字符，"></a>键可以是数值，字符，</h5><h5 id="值可以是数值，字符，列表，元组等数据结构"><a href="#值可以是数值，字符，列表，元组等数据结构" class="headerlink" title="值可以是数值，字符，列表，元组等数据结构"></a>值可以是数值，字符，列表，元组等数据结构</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d1 = &#123;<span class="number">1</span>: <span class="string">&#x27;h&#x27;</span>, <span class="number">2</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;k&#x27;</span>], <span class="number">3</span>: <span class="number">9</span>&#125;</span><br><span class="line">d2 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;Ky&#x27;</span>&#125;</span><br><span class="line">d3 = &#123;<span class="string">&#x27;q1&#x27;</span>: [<span class="number">90</span>, <span class="number">100</span>], <span class="string">&#x27;k2&#x27;</span>: <span class="string">&#x27;kkk&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="Python中的公有方法"><a href="#Python中的公有方法" class="headerlink" title="Python中的公有方法"></a>Python中的公有方法</h3><h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><h5 id="索引是通过下标位置定位来访问指定数据类型变量的值"><a href="#索引是通过下标位置定位来访问指定数据类型变量的值" class="headerlink" title="索引是通过下标位置定位来访问指定数据类型变量的值"></a>索引是通过下标位置定位来访问指定数据类型变量的值</h5><h5 id="下标从0开始"><a href="#下标从0开始" class="headerlink" title="下标从0开始"></a>下标从0开始</h5><h5 id="集合类型数据结构，不支持索引访问"><a href="#集合类型数据结构，不支持索引访问" class="headerlink" title="集合类型数据结构，不支持索引访问"></a>集合类型数据结构，不支持索引访问</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">s3 = <span class="string">&#x27;I Like Python&#x27;</span></span><br><span class="line">L1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">t2 = (<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;KL&#x27;</span>)</span><br><span class="line">d1 = &#123;<span class="number">1</span>: <span class="string">&#x27;h&#x27;</span>, <span class="number">2</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;k&#x27;</span>], <span class="number">3</span>: <span class="number">9</span>&#125;</span><br><span class="line">d3 = &#123;<span class="string">&#x27;q1&#x27;</span>: [<span class="number">90</span>, <span class="number">100</span>], <span class="string">&#x27;k2&#x27;</span>: <span class="string">&#x27;kkk&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(s3[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(s3[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(L1[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(t2[<span class="number">2</span>])</span><br><span class="line"><span class="built_in">print</span>(d1[<span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span>(d3[<span class="string">&#x27;k2&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-&#x27;</span>*<span class="number">40</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><h5 id="切片指的是指定索引位置，对数据实现分块访问或提取的异种数据操作方式"><a href="#切片指的是指定索引位置，对数据实现分块访问或提取的异种数据操作方式" class="headerlink" title="切片指的是指定索引位置，对数据实现分块访问或提取的异种数据操作方式"></a>切片指的是指定索引位置，对数据实现分块访问或提取的异种数据操作方式</h5><h5 id="字符串的切片是针对字符串中的每个字符进行操作"><a href="#字符串的切片是针对字符串中的每个字符进行操作" class="headerlink" title="字符串的切片是针对字符串中的每个字符进行操作"></a>字符串的切片是针对字符串中的每个字符进行操作</h5><h5 id="列表元组的切片，是针对其中的元素"><a href="#列表元组的切片，是针对其中的元素" class="headerlink" title="列表元组的切片，是针对其中的元素"></a>列表元组的切片，是针对其中的元素</h5><h5 id="切片方式为：开始索引位置》结束索引位置-1"><a href="#切片方式为：开始索引位置》结束索引位置-1" class="headerlink" title="切片方式为：开始索引位置》结束索引位置+1"></a>切片方式为：开始索引位置》结束索引位置+1</h5><h5 id="索引从0开始，如果省掉开始索引的位置或者结束索引的位置，则默认为0或者是最后的索引位置"><a href="#索引从0开始，如果省掉开始索引的位置或者结束索引的位置，则默认为0或者是最后的索引位置" class="headerlink" title="索引从0开始，如果省掉开始索引的位置或者结束索引的位置，则默认为0或者是最后的索引位置"></a>索引从0开始，如果省掉开始索引的位置或者结束索引的位置，则默认为0或者是最后的索引位置</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">s2 = <span class="string">&#x27;&#x27;&#x27;hello world!&#x27;&#x27;&#x27;</span></span><br><span class="line">L2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;HE&#x27;</span>, <span class="number">3</span>, <span class="number">5</span>]</span><br><span class="line">t2 = (<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;KL&#x27;</span>)</span><br><span class="line">s21 = s2[<span class="number">0</span>:]</span><br><span class="line">s22 = s2[<span class="number">0</span>:<span class="number">4</span>]</span><br><span class="line">s23 = s2[:]</span><br><span class="line">s24 = s2[<span class="number">1</span>:<span class="number">6</span>:<span class="number">2</span>]</span><br><span class="line">L21 = L2[<span class="number">1</span>:<span class="number">3</span>]</span><br><span class="line">L22 = L2[<span class="number">2</span>:]</span><br><span class="line">L23 = L2[:]</span><br><span class="line">t21 = t2[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">t22 = t2[:]</span><br><span class="line"><span class="built_in">print</span>(s21)</span><br><span class="line"><span class="built_in">print</span>(s22)</span><br><span class="line"><span class="built_in">print</span>(s23)</span><br><span class="line"><span class="built_in">print</span>(s24)</span><br><span class="line"><span class="built_in">print</span>(L21)</span><br><span class="line"><span class="built_in">print</span>(L22)</span><br><span class="line"><span class="built_in">print</span>(L23)</span><br><span class="line"><span class="built_in">print</span>(t21)</span><br><span class="line"><span class="built_in">print</span>(t22)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-&#x27;</span>*<span class="number">40</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="长度"><a href="#长度" class="headerlink" title="长度"></a>长度</h3><h5 id="字符串的长度是字符串中所有字符的个数，其中空格也算是一个字符"><a href="#字符串的长度是字符串中所有字符的个数，其中空格也算是一个字符" class="headerlink" title="字符串的长度是字符串中所有字符的个数，其中空格也算是一个字符"></a>字符串的长度是字符串中所有字符的个数，其中空格也算是一个字符</h5><h5 id="列表，元组，集合的长度是元素的个数"><a href="#列表，元组，集合的长度是元素的个数" class="headerlink" title="列表，元组，集合的长度是元素的个数"></a>列表，元组，集合的长度是元素的个数</h5><h5 id="字典的长度是键的个数"><a href="#字典的长度是键的个数" class="headerlink" title="字典的长度是键的个数"></a>字典的长度是键的个数</h5><h5 id="求长度可用函数len"><a href="#求长度可用函数len" class="headerlink" title="求长度可用函数len()"></a>求长度可用函数len()</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">s3 = <span class="string">&#x27;I Like Python&#x27;</span></span><br><span class="line">L1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">L2 = (<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;KL&#x27;</span>)</span><br><span class="line">J2 = &#123;<span class="number">1</span>, <span class="string">&#x27;h&#x27;</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>&#125;</span><br><span class="line">d1 = &#123;<span class="number">1</span>: <span class="string">&#x27;h&#x27;</span>, <span class="number">2</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;k&#x27;</span>], <span class="number">3</span>: <span class="number">9</span>&#125;</span><br><span class="line">k1 = <span class="built_in">len</span>(s3)</span><br><span class="line">k2 = <span class="built_in">len</span>(L1)</span><br><span class="line">k3 = <span class="built_in">len</span>(t2)</span><br><span class="line">k4 = <span class="built_in">len</span>(J2)</span><br><span class="line">k5 = <span class="built_in">len</span>(d1)</span><br><span class="line"><span class="built_in">print</span>(k1)</span><br><span class="line"><span class="built_in">print</span>(k2)</span><br><span class="line"><span class="built_in">print</span>(k3)</span><br><span class="line"><span class="built_in">print</span>(k4)</span><br><span class="line"><span class="built_in">print</span>(k5)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-&#x27;</span>*<span class="number">40</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h3><h5 id="统计包括最大值，最小值，求和"><a href="#统计包括最大值，最小值，求和" class="headerlink" title="统计包括最大值，最小值，求和"></a>统计包括最大值，最小值，求和</h5><h5 id="统计的对象可以是列表，元组，字符串"><a href="#统计的对象可以是列表，元组，字符串" class="headerlink" title="统计的对象可以是列表，元组，字符串"></a>统计的对象可以是列表，元组，字符串</h5><h5 id="字符串求最大值，返回排序靠后的字符"><a href="#字符串求最大值，返回排序靠后的字符" class="headerlink" title="字符串求最大值，返回排序靠后的字符"></a>字符串求最大值，返回排序靠后的字符</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">L1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">L2 = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>)</span><br><span class="line">s2 = <span class="string">&#x27;&#x27;&#x27;hello world!&#x27;&#x27;&#x27;</span></span><br><span class="line">m1 = <span class="built_in">max</span>(L1)</span><br><span class="line">m2 = <span class="built_in">max</span>(t1)</span><br><span class="line">m3 = <span class="built_in">max</span>(L1)</span><br><span class="line">m4 = <span class="built_in">sum</span>(t1)</span><br><span class="line">m5 = <span class="built_in">max</span>(s2)</span><br><span class="line"><span class="built_in">print</span>(m1)</span><br><span class="line"><span class="built_in">print</span>(m2)</span><br><span class="line"><span class="built_in">print</span>(m3)</span><br><span class="line"><span class="built_in">print</span>(m4)</span><br><span class="line"><span class="built_in">print</span>(m5)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-&#x27;</span>*<span class="number">40</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="成员身份"><a href="#成员身份" class="headerlink" title="成员身份"></a>成员身份</h3><h5 id="成员身份的确定使用的是in命令，用来判断某个元素是否属于指定的数据结构"><a href="#成员身份的确定使用的是in命令，用来判断某个元素是否属于指定的数据结构" class="headerlink" title="成员身份的确定使用的是in命令，用来判断某个元素是否属于指定的数据结构"></a>成员身份的确定使用的是in命令，用来判断某个元素是否属于指定的数据结构</h5><h5 id="返回结果用True-和False-，其中False表示假，True表示真"><a href="#返回结果用True-和False-，其中False表示假，True表示真" class="headerlink" title="返回结果用True 和False ，其中False表示假，True表示真"></a>返回结果用True 和False ，其中False表示假，True表示真</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">L1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">t1 = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>)</span><br><span class="line">s2 = <span class="string">&#x27;&#x27;&#x27;hello world!&#x27;&#x27;&#x27;</span></span><br><span class="line">J2 = &#123;<span class="number">1</span>, <span class="string">&#x27;h&#x27;</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="string">&#x27;SE&#x27;</span>&#125;</span><br><span class="line">z1 = <span class="string">&#x27;I&#x27;</span> <span class="keyword">in</span> s2</span><br><span class="line">z2 = <span class="string">&#x27;kj&#x27;</span> <span class="keyword">in</span> L1</span><br><span class="line">z3 = <span class="number">2</span> <span class="keyword">in</span> t1</span><br><span class="line">z4 = <span class="string">&#x27;SE&#x27;</span> <span class="keyword">in</span> J2</span><br><span class="line"><span class="built_in">print</span>(z1)</span><br><span class="line"><span class="built_in">print</span>(z2)</span><br><span class="line"><span class="built_in">print</span>(z3)</span><br><span class="line"><span class="built_in">print</span>(z4)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-&#x27;</span>*<span class="number">40</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="变量删除"><a href="#变量删除" class="headerlink" title="变量删除"></a>变量删除</h3><h5 id="通过del-函数来删除不必要的中间变量"><a href="#通过del-函数来删除不必要的中间变量" class="headerlink" title="通过del()函数来删除不必要的中间变量"></a>通过del()函数来删除不必要的中间变量</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">b = <span class="string">&#x27;str&#x27;</span></span><br><span class="line">c = &#123;<span class="number">1</span>: <span class="number">4</span>, <span class="number">2</span>: <span class="number">7</span>, <span class="number">3</span>: <span class="number">8</span>, <span class="number">4</span>: <span class="number">9</span>&#125;</span><br><span class="line"><span class="keyword">del</span> a, b</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="上述代码中删除了变量a-b，保留了变量c"><a href="#上述代码中删除了变量a-b，保留了变量c" class="headerlink" title="上述代码中删除了变量a,b，保留了变量c"></a>上述代码中删除了变量a,b，保留了变量c</h4><h4 id="列表，元组，字符串与字典的方法"><a href="#列表，元组，字符串与字典的方法" class="headerlink" title="列表，元组，字符串与字典的方法"></a>列表，元组，字符串与字典的方法</h4><h3 id="列表方法"><a href="#列表方法" class="headerlink" title="列表方法"></a>列表方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">L1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">L2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;HE&#x27;</span>, <span class="number">3</span>, <span class="number">5</span>]</span><br><span class="line">L3 = [<span class="string">&#x27;KJ&#x27;</span>, <span class="string">&#x27;CK&#x27;</span>, <span class="string">&#x27;HELLO&#x27;</span>]</span><br><span class="line">L4 = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">7</span>]</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="1-创建空列表-list"><a href="#1-创建空列表-list" class="headerlink" title="1.创建空列表:list()"></a>1.创建空列表:list()</h4><h5 id="有两种方式创建空列表-或者-list"><a href="#有两种方式创建空列表-或者-list" class="headerlink" title="有两种方式创建空列表  []  或者  list()"></a>有两种方式创建空列表  []  或者  list()</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">L = <span class="built_in">list</span>()    <span class="comment"># 产生空列表L</span></span><br><span class="line">L = []    <span class="comment"># 也可以用[]来产生空列表</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-添加元素-append"><a href="#2-添加元素-append" class="headerlink" title="2.添加元素:append()"></a>2.添加元素:append()</h4><h5 id="可以通过append函数依次向列表中添加元素"><a href="#可以通过append函数依次向列表中添加元素" class="headerlink" title="可以通过append函数依次向列表中添加元素"></a>可以通过append函数依次向列表中添加元素</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">L1.append(<span class="string">&#x27;H&#x27;</span>)   <span class="comment"># 向L1列表添加元素&lt;H&gt;</span></span><br><span class="line"><span class="built_in">print</span>(L1)</span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> L2:</span><br><span class="line">    L.append(t)</span><br><span class="line"><span class="built_in">print</span>(L)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-扩展列表-extend"><a href="#3-扩展列表-extend" class="headerlink" title="3.扩展列表:extend()"></a>3.扩展列表:extend()</h4><h5 id="extend是在列表后面添加整个列表"><a href="#extend是在列表后面添加整个列表" class="headerlink" title="extend是在列表后面添加整个列表"></a>extend是在列表后面添加整个列表</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">L1.extend(L2)    <span class="comment"># 在前面L1的基础上，添加整个L2到L1的后面</span></span><br><span class="line"><span class="built_in">print</span>(L1)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="4-元素计数-count"><a href="#4-元素计数-count" class="headerlink" title="4.元素计数:count()"></a>4.元素计数:count()</h4><h5 id="可以利用count函数来对某个元素出现的次数进行统计"><a href="#可以利用count函数来对某个元素出现的次数进行统计" class="headerlink" title="可以利用count函数来对某个元素出现的次数进行统计"></a>可以利用count函数来对某个元素出现的次数进行统计</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;元素2出现的次数为:&#x27;</span>, L1.count(<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="5-返回下表-index"><a href="#5-返回下表-index" class="headerlink" title="5.返回下表:index()"></a>5.返回下表:index()</h4><h5 id="通过index函数来返回元素的下标"><a href="#通过index函数来返回元素的下标" class="headerlink" title="通过index函数来返回元素的下标"></a>通过index函数来返回元素的下标</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;H的索引下标为:&#x27;</span>, L1.index(<span class="string">&#x27;H&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="6-删除元素-remove"><a href="#6-删除元素-remove" class="headerlink" title="6.删除元素:remove()"></a>6.删除元素:remove()</h4><h5 id="在列表中可以通过remove函数删除某个元素"><a href="#在列表中可以通过remove函数删除某个元素" class="headerlink" title="在列表中可以通过remove函数删除某个元素"></a>在列表中可以通过remove函数删除某个元素</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">L1.remove(<span class="string">&#x27;HE&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(L1)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="7-元素排列-sort"><a href="#7-元素排列-sort" class="headerlink" title="7.元素排列:sort()"></a>7.元素排列:sort()</h4><h5 id="通过sort函数对列表元素进行排序，默认按照升序排序"><a href="#通过sort函数对列表元素进行排序，默认按照升序排序" class="headerlink" title="通过sort函数对列表元素进行排序，默认按照升序排序"></a>通过sort函数对列表元素进行排序，默认按照升序排序</h5><h5 id="其中列表的元素可以修改，但是元组中的元素不能修改"><a href="#其中列表的元素可以修改，但是元组中的元素不能修改" class="headerlink" title="其中列表的元素可以修改，但是元组中的元素不能修改"></a>其中列表的元素可以修改，但是元组中的元素不能修改</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">L4.sort()</span><br><span class="line"><span class="built_in">print</span>(L4)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="元组方法"><a href="#元组方法" class="headerlink" title="元组方法"></a>元组方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">T1 = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line">T2 = (<span class="string">&#x27;H2&#x27;</span>, <span class="number">3</span>, <span class="string">&#x27;KL&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="1-创建空元组-tuple"><a href="#1-创建空元组-tuple" class="headerlink" title="1.创建空元组:tuple()"></a>1.创建空元组:tuple()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t1 = <span class="built_in">tuple</span>()  <span class="comment"># 产生空元组</span></span><br><span class="line">t = ()    <span class="comment"># 产生空元组</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-元素计数-count"><a href="#2-元素计数-count" class="headerlink" title="2.元素计数:count()"></a>2.元素计数:count()</h4><h5 id="通过count函数对元组中某个元素出现的次数进行统计"><a href="#通过count函数对元组中某个元素出现的次数进行统计" class="headerlink" title="通过count函数对元组中某个元素出现的次数进行统计"></a>通过count函数对元组中某个元素出现的次数进行统计</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;元素2出现的次数:&#x27;</span>, T1.count(<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-返回下表-index"><a href="#3-返回下表-index" class="headerlink" title="3.返回下表:index()"></a>3.返回下表:index()</h4><h5 id="与列表类似通过index函数返回元素中某个元组的索引下标"><a href="#与列表类似通过index函数返回元素中某个元组的索引下标" class="headerlink" title="与列表类似通过index函数返回元素中某个元组的索引下标"></a>与列表类似通过index函数返回元素中某个元组的索引下标</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;KL的下标索引为:&#x27;</span>, T2.index(<span class="string">&#x27;KL&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="4-元组连接"><a href="#4-元组连接" class="headerlink" title="4.元组连接"></a>4.元组连接</h4><h5 id="两个元组的链接可以直接通过“-”及逆行实现"><a href="#两个元组的链接可以直接通过“-”及逆行实现" class="headerlink" title="两个元组的链接可以直接通过“+”及逆行实现"></a>两个元组的链接可以直接通过“+”及逆行实现</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">T3 = T1+T2</span><br><span class="line"><span class="built_in">print</span>(T3)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h3><h4 id="1-创建空字符串-str"><a href="#1-创建空字符串-str" class="headerlink" title="1.创建空字符串:str()"></a>1.创建空字符串:str()</h4><h5 id="通过出str函数可以创建一个新字符串"><a href="#通过出str函数可以创建一个新字符串" class="headerlink" title="通过出str函数可以创建一个新字符串"></a>通过出str函数可以创建一个新字符串</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">S = <span class="built_in">str</span>()  <span class="comment"># 产生空字符串</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-查找子串-find"><a href="#2-查找子串-find" class="headerlink" title="2.查找子串:find()"></a>2.查找子串:find()</h4><h5 id="通过find函数可以查找子串开始索引的位置，如果没有找到返回值是-1"><a href="#通过find函数可以查找子串开始索引的位置，如果没有找到返回值是-1" class="headerlink" title="通过find函数可以查找子串开始索引的位置，如果没有找到返回值是-1"></a>通过find函数可以查找子串开始索引的位置，如果没有找到返回值是-1</h5><h5 id="其中find的第一个参数是需要查找的字串，第二个参数是待查字符串指定的开始位置，第三个参数是指定待查字符串的长度"><a href="#其中find的第一个参数是需要查找的字串，第二个参数是待查字符串指定的开始位置，第三个参数是指定待查字符串的长度" class="headerlink" title="其中find的第一个参数是需要查找的字串，第二个参数是待查字符串指定的开始位置，第三个参数是指定待查字符串的长度"></a>其中find的第一个参数是需要查找的字串，第二个参数是待查字符串指定的开始位置，第三个参数是指定待查字符串的长度</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">st = <span class="string">&#x27;hello world!&#x27;</span></span><br><span class="line">z1 = st.find(<span class="string">&#x27;he&#x27;</span>, <span class="number">0</span>, <span class="built_in">len</span>(st))  <span class="comment"># 返回包含字串开始索引的位置，否则返回-1</span></span><br><span class="line">z2 = st.find(<span class="string">&#x27;he&#x27;</span>, <span class="number">1</span>, <span class="built_in">len</span>(st))</span><br><span class="line"><span class="built_in">print</span>(z1, z2)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-替换字串-replace"><a href="#3-替换字串-replace" class="headerlink" title="3.替换字串:replace()"></a>3.替换字串:replace()</h4><h5 id="通过replace函数，可以替换指定的字串"><a href="#通过replace函数，可以替换指定的字串" class="headerlink" title="通过replace函数，可以替换指定的字串"></a>通过replace函数，可以替换指定的字串</h5><h5 id="其中replace函数第一行是被替换的字串，第二个参数是替换字串"><a href="#其中replace函数第一行是被替换的字串，第二个参数是替换字串" class="headerlink" title="其中replace函数第一行是被替换的字串，第二个参数是替换字串"></a>其中replace函数第一行是被替换的字串，第二个参数是替换字串</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">stt = st.replace(<span class="string">&#x27;or&#x27;</span>, <span class="string">&#x27;kl&#x27;</span>)   <span class="comment"># 原来的字符串st不变</span></span><br><span class="line"><span class="built_in">print</span>(stt)</span><br><span class="line"><span class="built_in">print</span>(st)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="4-字符串连接"><a href="#4-字符串连接" class="headerlink" title="4.字符串连接"></a>4.字符串连接</h4><h5 id="字符串的链接通过“-”进行实现"><a href="#字符串的链接通过“-”进行实现" class="headerlink" title="字符串的链接通过“+”进行实现"></a>字符串的链接通过“+”进行实现</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">st1 = <span class="string">&#x27;joh&#x27;</span></span><br><span class="line">st2 = st1+<span class="string">&#x27; &#x27;</span>+st</span><br><span class="line"><span class="built_in">print</span>(st2)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="5-字符串比较"><a href="#5-字符串比较" class="headerlink" title="5.字符串比较"></a>5.字符串比较</h4><h5 id="字符串的比较是通过比较运算符进行实现的"><a href="#字符串的比较是通过比较运算符进行实现的" class="headerlink" title="字符串的比较是通过比较运算符进行实现的"></a>字符串的比较是通过比较运算符进行实现的</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">&#x27;jo&#x27;</span></span><br><span class="line">str2 = <span class="string">&#x27;qb&#x27;</span></span><br><span class="line">str3 = <span class="string">&#x27;qb&#x27;</span></span><br><span class="line">s1 = str1 != str2</span><br><span class="line">s2 = str2 == str3</span><br><span class="line"><span class="built_in">print</span>(s1, s2)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="字典方法-dict"><a href="#字典方法-dict" class="headerlink" title="字典方法:dict()"></a>字典方法:dict()</h3><h4 id="1-通过dict函数可以创建新字典，也可以将嵌套列表，元组转换为字典"><a href="#1-通过dict函数可以创建新字典，也可以将嵌套列表，元组转换为字典" class="headerlink" title="1.通过dict函数可以创建新字典，也可以将嵌套列表，元组转换为字典"></a>1.通过dict函数可以创建新字典，也可以将嵌套列表，元组转换为字典</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">d = <span class="built_in">dict</span>()    <span class="comment"># 产生空字典</span></span><br><span class="line">D = &#123;&#125;</span><br><span class="line">list1 = [(<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;ok&#x27;</span>), (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;lk&#x27;</span>), (<span class="string">&#x27;001&#x27;</span>, <span class="string">&#x27;lk&#x27;</span>)]  <span class="comment"># 嵌套元素位元组</span></span><br><span class="line">list2 = [[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;ok&#x27;</span>], [<span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;lk&#x27;</span>], [<span class="number">3</span>, <span class="string">&#x27;lk&#x27;</span>]]  <span class="comment"># 嵌套元素为列表</span></span><br><span class="line">d1 = <span class="built_in">dict</span>(list1)</span><br><span class="line">d2 = <span class="built_in">dict</span>(list2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;d=:&#x27;</span>, d)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;D=:&#x27;</span>, D)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;d1=:&#x27;</span>, d1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;d2=:&#x27;</span>, d2)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-获取字典值-get"><a href="#2-获取字典值-get" class="headerlink" title="2.获取字典值:get()"></a>2.获取字典值:get()</h4><h5 id="通过get方法可以获取对应键的值"><a href="#通过get方法可以获取对应键的值" class="headerlink" title="通过get方法可以获取对应键的值"></a>通过get方法可以获取对应键的值</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(d2.get(<span class="string">&#x27;b&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-字典复制-setdefault"><a href="#3-字典复制-setdefault" class="headerlink" title="3.字典复制:setdefault()"></a>3.字典复制:setdefault()</h4><h5 id="通过setdefault函数，可以对预定义的空字典进行赋值"><a href="#通过setdefault函数，可以对预定义的空字典进行赋值" class="headerlink" title="通过setdefault函数，可以对预定义的空字典进行赋值"></a>通过setdefault函数，可以对预定义的空字典进行赋值</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">d.setdefault(<span class="string">&#x27;a&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">D.setdefault(<span class="string">&#x27;b&#x27;</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"><span class="built_in">print</span>(D)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="1-无返回值函数的定义与调用"><a href="#1-无返回值函数的定义与调用" class="headerlink" title="1.无返回值函数的定义与调用"></a>1.无返回值函数的定义与调用</h4><h5 id="执行后的结果是None，表示没有任何结果，因为该函数没有任何返回值"><a href="#执行后的结果是None，表示没有任何结果，因为该函数没有任何返回值" class="headerlink" title="执行后的结果是None，表示没有任何结果，因为该函数没有任何返回值"></a>执行后的结果是None，表示没有任何结果，因为该函数没有任何返回值</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">sumt</span>(<span class="params">t</span>):</span><br><span class="line">    s = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> t:</span><br><span class="line">        s = s+t</span><br><span class="line">        t = t-<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s = sumt(<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(s)</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h4 id="2-有返回值函数的定义与调用"><a href="#2-有返回值函数的定义与调用" class="headerlink" title="2.有返回值函数的定义与调用"></a>2.有返回值函数的定义与调用</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">sumt</span>(<span class="params">t</span>):</span><br><span class="line">    s = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> t:</span><br><span class="line">        s = s+t</span><br><span class="line">        t = t-<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s = sumt(<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(s)</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h4 id="3-有多返回值函数的定义与调用"><a href="#3-有多返回值函数的定义与调用" class="headerlink" title="3.有多返回值函数的定义与调用"></a>3.有多返回值函数的定义与调用</h4><h5 id="多返回值函数可以用一个元组来存放返回结果，元组中的元素数据类型可以不相同"><a href="#多返回值函数可以用一个元组来存放返回结果，元组中的元素数据类型可以不相同" class="headerlink" title="多返回值函数可以用一个元组来存放返回结果，元组中的元素数据类型可以不相同"></a>多返回值函数可以用一个元组来存放返回结果，元组中的元素数据类型可以不相同</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">test</span>(<span class="params">r</span>):</span><br><span class="line">    <span class="keyword">import</span> math</span><br><span class="line">    s = math.pi*r**<span class="number">2</span></span><br><span class="line">    c = <span class="number">2</span>*math.pi*r</span><br><span class="line">    L = (s, c)</span><br><span class="line">    D = [s, c, L]</span><br><span class="line">    <span class="keyword">return</span> (s, c, L, D)</span><br><span class="line"></span><br><span class="line">v = test(<span class="number">10</span>)</span><br><span class="line">s = v[<span class="number">0</span>]</span><br><span class="line">c = v[<span class="number">1</span>]</span><br><span class="line">L = v[<span class="number">2</span>]</span><br><span class="line">D = v[<span class="number">3</span>]</span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"><span class="built_in">print</span>(c)</span><br><span class="line"><span class="built_in">print</span>(L)</span><br><span class="line"><span class="built_in">print</span>(D)</span><br></pre></td></tr></table></figure>
+          <h4 id="给你一个字符串-s-和一个字符-c-，且-c-是-s-中出现过的字符。"><a href="#给你一个字符串-s-和一个字符-c-，且-c-是-s-中出现过的字符。" class="headerlink" title="给你一个字符串 s 和一个字符 c ，且 c 是 s 中出现过的字符。"></a>给你一个字符串 s 和一个字符 c ，且 c 是 s 中出现过的字符。</h4><h4 id="返回一个整数数组-answer-，其中-answer-length-x3D-x3D-s-length-且-answer-i-是-s-中从下标-i-到离它-最近-的字符-c-的-距离-。"><a href="#返回一个整数数组-answer-，其中-answer-length-x3D-x3D-s-length-且-answer-i-是-s-中从下标-i-到离它-最近-的字符-c-的-距离-。" class="headerlink" title="返回一个整数数组 answer ，其中 answer.length &#x3D;&#x3D; s.length 且 answer[i] 是 s 中从下标 i 到离它 最近 的字符 c 的 距离 。"></a>返回一个整数数组 answer ，其中 answer.length &#x3D;&#x3D; s.length 且 answer[i] 是 s 中从下标 i 到离它 最近 的字符 c 的 距离 。</h4><h4 id="两个下标-i-和-j-之间的-距离-为-abs-i-j-，其中-abs-是绝对值函数。"><a href="#两个下标-i-和-j-之间的-距离-为-abs-i-j-，其中-abs-是绝对值函数。" class="headerlink" title="两个下标 i 和 j 之间的 距离 为 abs(i - j) ，其中 abs 是绝对值函数。"></a>两个下标 i 和 j 之间的 距离 为 abs(i - j) ，其中 abs 是绝对值函数。</h4><h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><blockquote>
+<p><strong>输入：</strong>s &#x3D; “loveleetcode”, c &#x3D; “e”</p>
+<p><strong>输出：</strong>[3,2,1,0,1,0,0,1,2,2,1,0]</p>
+<p><strong>解释：</strong>字符 ‘e’ 出现在下标 3、5、6 和 11 处（下标从 0 开始计数）。</p>
+<p>距下标 0 最近的 ‘e’ 出现在下标 3 ，所以距离为 abs(0 - 3) &#x3D; 3 。</p>
+<p>距下标 1 最近的 ‘e’ 出现在下标 3 ，所以距离为 abs(1 - 3) &#x3D; 2 。</p>
+<p>对于下标 4 ，出现在下标 3 和下标 5 处的 ‘e’ 都离它最近，但距离是一样的 abs(4 - 3) &#x3D;&#x3D; abs(4 - 5) &#x3D; 1 。</p>
+<p>距下标 8 最近的 ‘e’ 出现在下标 6 ，所以距离为 abs(8 - 6) &#x3D; 2 。</p>
+</blockquote>
+<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><blockquote>
+<p><strong>输入：</strong>s &#x3D; “aaab”, c &#x3D; “b”<br><strong>输出：</strong>[3,2,1,0]</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<blockquote>
+<p>1 &lt;&#x3D; s.length &lt;&#x3D; 104<br>s[i] 和 c 均为小写英文字母<br>题目数据保证 c 在 s 中至少出现一次</p>
+</blockquote>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><h5 id="两次遍历"><a href="#两次遍历" class="headerlink" title="两次遍历"></a>两次遍历</h5><p>问题可以转换成，对 s 的每个下标 i，求</p>
+<ul>
+<li><p>s[i]到其左侧最近的字符 c 的距离</p>
+</li>
+<li><p>s[i]到其右侧最近的字符 c 的距离</p>
+</li>
+</ul>
+<p>这两者的最小值。</p>
+<p>对于前者，我们可以从左往右遍历 s，若 s[i]&#x3D;c 则记录下此时字符 c 的的下标 idx。遍历的同时更新 answer[i]&#x3D;i−idx。</p>
+<p>对于后者，我们可以从右往左遍历 s，若 s[i]&#x3D;c 则记录下此时字符 c 的的下标 idx。遍历的同时更新 answer[i]&#x3D;min(answer[i],idx−i)。</p>
+<p>代码实现时，在开始遍历的时候 idx 可能不存在，为了简化逻辑，我们可以用 −n 或 2n 表示，这里 n 是 s 的长度。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shortestToChar</span>(<span class="params">self, s: <span class="built_in">str</span>, c: <span class="built_in">str</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        n = <span class="built_in">len</span>(s)</span><br><span class="line">        ans = [<span class="number">0</span>] * n</span><br><span class="line"></span><br><span class="line">​    idx = -n</span><br><span class="line">​    <span class="keyword">for</span> i, ch <span class="keyword">in</span> <span class="built_in">enumerate</span>(s):</span><br><span class="line">​        <span class="keyword">if</span> ch == c:</span><br><span class="line">​            idx = i</span><br><span class="line">​        ans[i] = i - idx</span><br><span class="line"></span><br><span class="line">​    idx = <span class="number">2</span> * n</span><br><span class="line">​    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n - <span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">​        <span class="keyword">if</span> s[i] == c:</span><br><span class="line">​            idx = i</span><br><span class="line">​        ans[i] = <span class="built_in">min</span>(ans[i], idx - i)</span><br><span class="line">​    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li>时间复杂度：O(n)<em>O</em>(<em>n</em>)，其中 n<em>n</em> 是字符串 s<em>s</em> 的长度。</li>
+<li>空间复杂度：O(1)<em>O</em>(1)。返回值不计入空间复杂度。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="白猫_wHCat">
+      <meta itemprop="description" content="正在学习摆烂的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白猫_wHCat">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B01/" class="post-title-link" itemprop="url">Python基础语法案例01</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:31:49" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>184</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="现实中的数据主要有数值和文本两种类型，在Python中可用数值和字符串两种基本数据类型来定义"><a href="#现实中的数据主要有数值和文本两种类型，在Python中可用数值和字符串两种基本数据类型来定义" class="headerlink" title="现实中的数据主要有数值和文本两种类型，在Python中可用数值和字符串两种基本数据类型来定义"></a>现实中的数据主要有数值和文本两种类型，在Python中可用数值和字符串两种基本数据类型来定义</h5><h5 id="输出数值和字符串两种基本数据类型例子"><a href="#输出数值和字符串两种基本数据类型例子" class="headerlink" title="输出数值和字符串两种基本数据类型例子"></a>输出数值和字符串两种基本数据类型例子</h5><h5 id="定义浮点型数值变量a"><a href="#定义浮点型数值变量a" class="headerlink" title="定义浮点型数值变量a"></a>定义浮点型数值变量a</h5><h5 id="定义字符类型变量b"><a href="#定义字符类型变量b" class="headerlink" title="定义字符类型变量b"></a>定义字符类型变量b</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">float</span>()</span><br><span class="line">b = <span class="string">&#x27;&#x27;&#x27; &#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">isinstance</span>(a, <span class="built_in">float</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">isinstance</span>(b, <span class="built_in">str</span>))</span><br></pre></td></tr></table></figure>
 
 
       
@@ -367,7 +333,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/19/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -381,7 +347,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/04/19/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B02/" class="post-title-link" itemprop="url">Python基础语法案例02</a>
         </h2>
 
         <div class="post-meta">
@@ -390,8 +356,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-04-19 23:51:57" itemprop="dateCreated datePublished" datetime="2022-04-19T23:51:57+08:00">2022-04-19</time>
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:32:37" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
             </span>
 
           <br>
@@ -400,7 +367,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>367</span>
+              <span>230</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -419,19 +386,527 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+          <h5 id="利用Python中的简单数据结构可以实现连续存储，比如列表和元组，为了访问以及检索的方便可对储存的值设置唯一的标识键，可通过字典来实现，请给出例子"><a href="#利用Python中的简单数据结构可以实现连续存储，比如列表和元组，为了访问以及检索的方便可对储存的值设置唯一的标识键，可通过字典来实现，请给出例子" class="headerlink" title="利用Python中的简单数据结构可以实现连续存储，比如列表和元组，为了访问以及检索的方便可对储存的值设置唯一的标识键，可通过字典来实现，请给出例子"></a>利用Python中的简单数据结构可以实现连续存储，比如列表和元组，为了访问以及检索的方便可对储存的值设置唯一的标识键，可通过字典来实现，请给出例子</h5><h5 id="定义一个字典d，键分别为a1-a2-值分别为列表-1-2-3-和元组-3-5-6"><a href="#定义一个字典d，键分别为a1-a2-值分别为列表-1-2-3-和元组-3-5-6" class="headerlink" title="定义一个字典d，键分别为a1,a2,值分别为列表[1,2,3]和元组(3,5,6)"></a>定义一个字典d，键分别为a1,a2,值分别为列表[1,2,3]和元组(3,5,6)</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">return_values</span>():</span><br><span class="line">    d = &#123;<span class="string">&#x27;a1&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="string">&#x27;a2&#x27;</span>: (<span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>)&#125;</span><br><span class="line">    <span class="keyword">return</span> d</span><br><span class="line"></span><br><span class="line">d = return_values()</span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+      
+    </div>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="白猫_wHCat">
+      <meta itemprop="description" content="正在学习摆烂的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白猫_wHCat">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B03/" class="post-title-link" itemprop="url">Python基础语法案例03</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:33:23" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>624</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="用简单的数据类型（字符串）和基本数据结构（列表，元组，字典）可实现数据的存储，请给出单值，连续多值和不连续多值的访问例子"><a href="#用简单的数据类型（字符串）和基本数据结构（列表，元组，字典）可实现数据的存储，请给出单值，连续多值和不连续多值的访问例子" class="headerlink" title="用简单的数据类型（字符串）和基本数据结构（列表，元组，字典）可实现数据的存储，请给出单值，连续多值和不连续多值的访问例子"></a>用简单的数据类型（字符串）和基本数据结构（列表，元组，字典）可实现数据的存储，请给出单值，连续多值和不连续多值的访问例子</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">return_values</span>():</span><br><span class="line">    <span class="comment"># 对列表a切片，分别切出1,[1,2],[1,3]</span></span><br><span class="line">    a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">    a1 = a[<span class="number">0</span>]</span><br><span class="line">    a2 = a[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">    a3 = a[<span class="number">0</span>:<span class="number">3</span>:<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 对元组b切片，分别切出1,(1,2),(1,3)</span></span><br><span class="line">    b = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>)</span><br><span class="line">    b1 = b[<span class="number">0</span>]</span><br><span class="line">    b2 = b[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">    b3 = b[<span class="number">0</span>:<span class="number">3</span>:<span class="number">2</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 对字符串c切片，分别切出&#x27;h&#x27;,&#x27;he&#x27;,&#x27;hlo&#x27;</span></span><br><span class="line">    c = <span class="string">&#x27;hello world!&#x27;</span></span><br><span class="line">    c1 = c[<span class="number">0</span>]</span><br><span class="line">    c2 = c[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">    c3 = c[<span class="number">0</span>:<span class="number">6</span>:<span class="number">2</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 对字典d切片，分别切出a,b键对应的值</span></span><br><span class="line">    d = &#123;<span class="string">&#x27;a&#x27;</span>: [<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="string">&#x27;b&#x27;</span>: (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>), <span class="string">&#x27;c&#x27;</span>: [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>], <span class="string">&#x27;d&#x27;</span>: <span class="string">&#x27;hello world&#x27;</span>&#125;</span><br><span class="line">    d1 = d[<span class="string">&#x27;a&#x27;</span>]</span><br><span class="line">    d2 = d[<span class="string">&#x27;c&#x27;</span>]</span><br><span class="line">    <span class="keyword">return</span> a1, a2, a3, b1, b2, b3, c1, c2, c3, d1, d2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(return_values())</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="白猫_wHCat">
+      <meta itemprop="description" content="正在学习摆烂的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白猫_wHCat">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B05/" class="post-title-link" itemprop="url">Python基础语法案例05</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:35:01" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>467</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="用for循环一次打印2017年11月和12月的自然日期，并在控制台下显示出来"><a href="#用for循环一次打印2017年11月和12月的自然日期，并在控制台下显示出来" class="headerlink" title="用for循环一次打印2017年11月和12月的自然日期，并在控制台下显示出来"></a>用for循环一次打印2017年11月和12月的自然日期，并在控制台下显示出来</h5><h5 id="用for循环一次获取2017年11月和12月的自然日期，并分别用列表L1和L2来存储"><a href="#用for循环一次获取2017年11月和12月的自然日期，并分别用列表L1和L2来存储" class="headerlink" title="用for循环一次获取2017年11月和12月的自然日期，并分别用列表L1和L2来存储"></a>用for循环一次获取2017年11月和12月的自然日期，并分别用列表L1和L2来存储</h5><h5 id="注意：日期格式长度10的字符串，比如“2017-11-02”"><a href="#注意：日期格式长度10的字符串，比如“2017-11-02”" class="headerlink" title="注意：日期格式长度10的字符串，比如“2017-11-02”"></a>注意：日期格式长度10的字符串，比如“2017-11-02”</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">return_values</span>():</span><br><span class="line">    L1=[]</span><br><span class="line">    L2=[]</span><br><span class="line">    S1=<span class="string">&#x27;&#x27;&#x27;2017-11-&#x27;&#x27;&#x27;</span></span><br><span class="line">    S2=<span class="string">&#x27;&#x27;&#x27;2017-12-&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">31</span>):</span><br><span class="line">        <span class="keyword">if</span> i&lt;<span class="number">10</span>:</span><br><span class="line">            L1.append(S1+<span class="string">&#x27;0&#x27;</span>+<span class="built_in">str</span>(i))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            L1.append(S1+<span class="built_in">str</span>(i))</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">32</span>):</span><br><span class="line">        <span class="keyword">if</span> j&lt;<span class="number">10</span>:</span><br><span class="line">            L2.append(S2+<span class="string">&#x27;0&#x27;</span>+<span class="built_in">str</span>(j))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            L2.append(S2+<span class="built_in">str</span>(j))</span><br><span class="line">    <span class="keyword">return</span>(L1,L2)</span><br><span class="line"><span class="built_in">print</span>(return_values())</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="白猫_wHCat">
+      <meta itemprop="description" content="正在学习摆烂的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白猫_wHCat">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B04/" class="post-title-link" itemprop="url">Python基础语法案例04</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:34:19" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>216</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="建立一个空列表L1，并向列表中添加数值“3”和文本“Python”两个元素，同时定义另一个列表L2-x3D-1-2-3-4-，并将L2添加到L1的后面"><a href="#建立一个空列表L1，并向列表中添加数值“3”和文本“Python”两个元素，同时定义另一个列表L2-x3D-1-2-3-4-，并将L2添加到L1的后面" class="headerlink" title="建立一个空列表L1，并向列表中添加数值“3”和文本“Python”两个元素，同时定义另一个列表L2&#x3D;[1,2,3,4]，并将L2添加到L1的后面"></a>建立一个空列表L1，并向列表中添加数值“3”和文本“Python”两个元素，同时定义另一个列表L2&#x3D;[1,2,3,4]，并将L2添加到L1的后面</h5><h5 id="建立含有3和Python的列表L1，并将L2添加到L1后面"><a href="#建立含有3和Python的列表L1，并将L2添加到L1后面" class="headerlink" title="建立含有3和Python的列表L1，并将L2添加到L1后面"></a>建立含有3和Python的列表L1，并将L2添加到L1后面</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">return_values</span>():</span><br><span class="line">    L2=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">    L1=[<span class="number">3</span>,<span class="string">&#x27;Python&#x27;</span>]</span><br><span class="line">    L1.extend(L2)</span><br><span class="line">    <span class="keyword">return</span>(L1,L2)</span><br><span class="line"><span class="built_in">print</span>(return_values())</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B06/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="白猫_wHCat">
+      <meta itemprop="description" content="正在学习摆烂的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白猫_wHCat">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B06/" class="post-title-link" itemprop="url">Python基础语法案例06</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:35:57" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>667</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="将列表L-x3D-‘113-980-22-566’-’113-940-22-686’-’113-957-22-576’-’114-244-22-564’-中的经纬度字符型数据，按经度和纬度拆分出来并转换为数值类型，分别存储为两个不同的列表L1和L2"><a href="#将列表L-x3D-‘113-980-22-566’-’113-940-22-686’-’113-957-22-576’-’114-244-22-564’-中的经纬度字符型数据，按经度和纬度拆分出来并转换为数值类型，分别存储为两个不同的列表L1和L2" class="headerlink" title="将列表L&#x3D;[‘113.980 22.566’,’113.940 22.686’,’113.957 22.576’,’114.244 22.564’]中的经纬度字符型数据，按经度和纬度拆分出来并转换为数值类型，分别存储为两个不同的列表L1和L2"></a>将列表L&#x3D;[‘113.980 22.566’,’113.940 22.686’,’113.957 22.576’,’114.244 22.564’]中的经纬度字符型数据，按经度和纬度拆分出来并转换为数值类型，分别存储为两个不同的列表L1和L2</h5><h5 id="拆分字符串用split-方法语法为str-aplit-s-num-n"><a href="#拆分字符串用split-方法语法为str-aplit-s-num-n" class="headerlink" title="拆分字符串用split()方法语法为str.aplit(s,num)[n]"></a>拆分字符串用split()方法语法为str.aplit(s,num)[n]</h5><h5 id="s为分隔符，不写默认为空格，若没有给定分隔符时，则把整个字符串作为列表的一个元素返回"><a href="#s为分隔符，不写默认为空格，若没有给定分隔符时，则把整个字符串作为列表的一个元素返回" class="headerlink" title="s为分隔符，不写默认为空格，若没有给定分隔符时，则把整个字符串作为列表的一个元素返回"></a>s为分隔符，不写默认为空格，若没有给定分隔符时，则把整个字符串作为列表的一个元素返回</h5><h5 id="num是分割次数，如果给定了分割次数字符串就要分割成num-1个子字符串，并且每一个子字符串可以赋给新的变量"><a href="#num是分割次数，如果给定了分割次数字符串就要分割成num-1个子字符串，并且每一个子字符串可以赋给新的变量" class="headerlink" title="num是分割次数，如果给定了分割次数字符串就要分割成num+1个子字符串，并且每一个子字符串可以赋给新的变量"></a>num是分割次数，如果给定了分割次数字符串就要分割成num+1个子字符串，并且每一个子字符串可以赋给新的变量</h5><h5 id="n-表示选取第n个分片，n表示返回的list中元素下标，从0开始"><a href="#n-表示选取第n个分片，n表示返回的list中元素下标，从0开始" class="headerlink" title="[n]表示选取第n个分片，n表示返回的list中元素下标，从0开始"></a>[n]表示选取第n个分片，n表示返回的list中元素下标，从0开始</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">return_values</span>():</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将列表L中的经纬度字符型数据按经度纬度拆分出来并转换为数值类型</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 分别存储为两个不同的列表L1和L2</span></span><br><span class="line"></span><br><span class="line">​    L=[<span class="string">&#x27;113.980 22.566&#x27;</span>,<span class="string">&#x27;113.940 22.686&#x27;</span>,<span class="string">&#x27;113.957 22.576&#x27;</span>,<span class="string">&#x27;114.244 22.564&#x27;</span>]</span><br><span class="line">​    L1=[]</span><br><span class="line">​    L2=[]</span><br><span class="line">​    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">​        s=L[i]</span><br><span class="line">​        x=s.split(<span class="string">&#x27; &#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">​        y=s.split(<span class="string">&#x27; &#x27;</span>)[<span class="number">1</span>]</span><br><span class="line">​        x=<span class="built_in">float</span>(x)</span><br><span class="line">​        y=<span class="built_in">float</span>(y)</span><br><span class="line">​        L1.append(x)</span><br><span class="line">​        L2.append(y)</span><br><span class="line">​    <span class="keyword">return</span>(L1,L2)</span><br><span class="line"><span class="built_in">print</span>(return_values())</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B07/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="白猫_wHCat">
+      <meta itemprop="description" content="正在学习摆烂的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白猫_wHCat">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B07/" class="post-title-link" itemprop="url">Python基础语法案例07</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:36:29" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>347</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="编写一段程序代码，利用条件语句实现成绩的分级，其中90-100为优秀，80-89为良好，70-79为中等，60-69为及格，0-59为不及格"><a href="#编写一段程序代码，利用条件语句实现成绩的分级，其中90-100为优秀，80-89为良好，70-79为中等，60-69为及格，0-59为不及格" class="headerlink" title="编写一段程序代码，利用条件语句实现成绩的分级，其中90-100为优秀，80-89为良好，70-79为中等，60-69为及格，0-59为不及格"></a>编写一段程序代码，利用条件语句实现成绩的分级，其中90-100为优秀，80-89为良好，70-79为中等，60-69为及格，0-59为不及格</h5><h5 id="现在有成绩为85分，请输出成绩等级"><a href="#现在有成绩为85分，请输出成绩等级" class="headerlink" title="现在有成绩为85分，请输出成绩等级"></a>现在有成绩为85分，请输出成绩等级</h5><h5 id="在函数内编写程序"><a href="#在函数内编写程序" class="headerlink" title="在函数内编写程序"></a>在函数内编写程序</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">t=<span class="number">85</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">return_values</span>():</span><br><span class="line">    t=<span class="number">85</span></span><br><span class="line">    <span class="keyword">if</span> t&gt;=<span class="number">90</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;优秀&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> t&gt;=<span class="number">80</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;良好&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> t&gt;=<span class="number">70</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;中等&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> t&gt;=<span class="number">60</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;及格&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;不及格&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(return_values())</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B08/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="白猫_wHCat">
+      <meta itemprop="description" content="正在学习摆烂的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白猫_wHCat">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B08/" class="post-title-link" itemprop="url">Python基础语法案例08</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:37:00" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>199</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="某银行一年定期存款利润为3-，期末本金和利息一起存入下一个年度"><a href="#某银行一年定期存款利润为3-，期末本金和利息一起存入下一个年度" class="headerlink" title="某银行一年定期存款利润为3%，期末本金和利息一起存入下一个年度"></a>某银行一年定期存款利润为3%，期末本金和利息一起存入下一个年度</h5><h5 id="如果现存如1万元，需要经过多少年才h使得本金和利息打到1-8万元"><a href="#如果现存如1万元，需要经过多少年才h使得本金和利息打到1-8万元" class="headerlink" title="如果现存如1万元，需要经过多少年才h使得本金和利息打到1.8万元"></a>如果现存如1万元，需要经过多少年才h使得本金和利息打到1.8万元</h5><h5 id="运用while循环语句实现计算，并返回计算结果a（需要多少年）"><a href="#运用while循环语句实现计算，并返回计算结果a（需要多少年）" class="headerlink" title="运用while循环语句实现计算，并返回计算结果a（需要多少年）"></a>运用while循环语句实现计算，并返回计算结果a（需要多少年）</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">return_values</span>():</span><br><span class="line">    x=<span class="built_in">float</span>(<span class="number">10000</span>)</span><br><span class="line">    a=<span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x&lt;<span class="number">18000</span>:</span><br><span class="line">        x=x*<span class="number">0.03</span>+x</span><br><span class="line">        a+=<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span>(a)</span><br><span class="line"><span class="built_in">print</span>(return_values())</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/04/20/Python%E6%A1%88%E4%BE%8B10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="白猫_wHCat">
+      <meta itemprop="description" content="正在学习摆烂的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白猫_wHCat">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/20/Python%E6%A1%88%E4%BE%8B10/" class="post-title-link" itemprop="url">Python基础语法案例10</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-20 14:29:34 / 修改时间：14:37:55" itemprop="dateCreated datePublished" datetime="2022-04-20T14:29:34+08:00">2022-04-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>212</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="定义一个函数用来计算长方体的表面积和体积"><a href="#定义一个函数用来计算长方体的表面积和体积" class="headerlink" title="定义一个函数用来计算长方体的表面积和体积"></a>定义一个函数用来计算长方体的表面积和体积</h5><h5 id="函数的输入参数为长L，宽K和高H，返回结果为表面积S和体积V"><a href="#函数的输入参数为长L，宽K和高H，返回结果为表面积S和体积V" class="headerlink" title="函数的输入参数为长L，宽K和高H，返回结果为表面积S和体积V"></a>函数的输入参数为长L，宽K和高H，返回结果为表面积S和体积V</h5><h5 id="调用定义的函数计算长宽高分别为1，2，3的长方体，并返回计算结果t"><a href="#调用定义的函数计算长宽高分别为1，2，3的长方体，并返回计算结果t" class="headerlink" title="调用定义的函数计算长宽高分别为1，2，3的长方体，并返回计算结果t"></a>调用定义的函数计算长宽高分别为1，2，3的长方体，并返回计算结果t</h5><h5 id="在函数内作答"><a href="#在函数内作答" class="headerlink" title="在函数内作答"></a>在函数内作答</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">return_values</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test</span>(<span class="params">L,K,H</span>):</span><br><span class="line">        S=L*K*<span class="number">2</span>+K*H*<span class="number">2</span>+L*H*<span class="number">2</span></span><br><span class="line">        V=L*K*H</span><br><span class="line">        <span class="keyword">return</span>(S,V)</span><br><span class="line">    t=test(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">    <span class="keyword">return</span>(t)</span><br><span class="line"><span class="built_in">print</span>(return_values())</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -449,6 +924,9 @@
 
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -515,12 +993,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -582,12 +1060,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">10k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6 分钟</span>
+    <span title="站点阅读时长">10 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
