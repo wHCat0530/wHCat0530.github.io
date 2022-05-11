@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"whcat0530.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384from sklearn.datasets import load_iris  #">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础语法案例01">
+<meta property="og:url" content="https://whcat0530.github.io/2022/05/11/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:site_name" content="白猫_wHCat">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384from sklearn.datasets import load_iris  #">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-11T01:30:00.000Z">
+<meta property="article:modified_time" content="2022-05-11T01:35:16.195Z">
+<meta property="article:author" content="白猫_wHCat">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="sklearn">
+<meta property="article:tag" content="matplotlib">
+<meta property="article:tag" content="pandas">
+<meta property="article:tag" content="numpy">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://whcat0530.github.io/2022/05/11/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E6%A8%A1%E5%9E%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Python基础语法案例01 | 白猫_wHCat</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">白猫_wHCat</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">尽力而为</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://whcat0530.github.io/2022/05/11/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="白猫_wHCat">
+      <meta itemprop="description" content="正在学习摆烂的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白猫_wHCat">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python基础语法案例01
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-05-11 09:30:00 / 修改时间：09:35:16" itemprop="dateCreated datePublished" datetime="2022-05-11T09:30:00+08:00">2022-05-11</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_iris  <span class="comment"># Iris数据集存储在load_iris函数中</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> mglearn</span><br><span class="line"></span><br><span class="line">iris_dataset = load_iris()  <span class="comment"># 通过load_iris()导出数据保存在iris_dataset中，其中load_iris()返回的对象是一个Bunch对象，是类似于字典模式的一个对象</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Keys of iris_dataset:\n&#123;&#125;&quot;</span>.<span class="built_in">format</span>(iris_dataset.keys()))  <span class="comment"># 输出并查看数据集</span></span><br><span class="line"><span class="built_in">print</span>(iris_dataset[<span class="string">&#x27;DESCR&#x27;</span>][:<span class="number">193</span>] + <span class="string">&quot;\n...&quot;</span>)  <span class="comment"># DESCR键对应的是数据集的简要说明</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Target names:\n&#123;&#125;&quot;</span>.<span class="built_in">format</span>(iris_dataset[<span class="string">&#x27;target_names&#x27;</span>]))  <span class="comment"># target_names键对应的值是一个字符串数组，其中包含我们要预测的化的品种</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Feature names:\n&#123;&#125;&quot;</span>.<span class="built_in">format</span>(iris_dataset[<span class="string">&#x27;feature_names&#x27;</span>]))  <span class="comment"># feature_names键对应的值是一个字符串列表，对每一个特征进行了说明</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Type of data:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(<span class="built_in">type</span>(iris_dataset[<span class="string">&#x27;data&#x27;</span>])))  <span class="comment"># 数据包括在target和data字段中，data中是各种数据的测量数据，格式为Numpy数组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Shape of data:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(iris_dataset[<span class="string">&#x27;data&#x27;</span>].shape))  <span class="comment"># data数组的每一行对应一朵花，列代表每朵花的四个测量数据</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;First five rows of data:\n&#123;&#125;&quot;</span>.<span class="built_in">format</span>(iris_dataset[<span class="string">&#x27;data&#x27;</span>][:<span class="number">5</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看出数组中包括150多不同的花的测量数据，其中机器学习中的个体叫做 样本（sample） 属性叫做 特征（feature） data数组的 形状（shape） 是样本数乘以特征数</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Type of target:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(iris_dataset[<span class="string">&#x27;target&#x27;</span>]))  <span class="comment"># target数组是包括测量过的每朵花的品种，也是一个Numpy数组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Shape of target:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(iris_dataset[<span class="string">&#x27;target&#x27;</span>].shape))  <span class="comment"># target是一个一维数组，每一朵花对应其中的一个数据</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Target:\n&#123;&#125;&quot;</span>.<span class="built_in">format</span>(iris_dataset[<span class="string">&#x27;target&#x27;</span>]))  <span class="comment"># 品种被转换成从0到2的整数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上面数字的代表含义有iris[&#x27;target_names&#x27;]输给出，0代表setosa，1代表versicolor，2代表virginica</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上述数据无法直接明确的指出我们模型的 泛化（generalize）能力如何</span></span><br><span class="line"><span class="comment"># 如果要进行评估模型的性能，通常是对收集好的带标签数据分成两部分</span></span><br><span class="line"><span class="comment"># 一部分数据用于构建机器学习模型，叫做 训练模型（training data） 或 训练集（training set）</span></span><br><span class="line"><span class="comment"># 其余的数据用来评估模型的性能，叫做 测试数据（test data）， 测试集（test set） 或 留出集（hold-out set）</span></span><br><span class="line"><span class="comment"># 其中scikit-learn中的train_test_split函数可以对数据集进京打乱并进行拆分，这个函数将75%的行数据及对应标签作为训练集，剩下25%的数据集标签作为测试集，且数据量可以进行调整</span></span><br><span class="line"><span class="comment"># 通常scikit-learn中的数据用X来表示，而标签用y来表示，其中X是函数的输入，y是函数的输出</span></span><br><span class="line"></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(  <span class="comment"># 对数据调用train_test_split并对结果采用下面这种通用的命名方法</span></span><br><span class="line">    iris_dataset[<span class="string">&#x27;data&#x27;</span>], iris_dataset[<span class="string">&#x27;target&#x27;</span>], random_state=<span class="number">0</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过train_test_split对数据进行打乱是为了让训练集以及测试集包含的数据广度足够大</span></span><br><span class="line"><span class="comment"># 使用random_state参数指定了随机数生成器的种子，这样的函数输出就是固定不变的所以这行代码的输出始终相同</span></span><br><span class="line"><span class="comment"># train_test_split函数的输出为X_train、X_test、y_train、y_test，他们都是Numpy数组，其中X_train包含了75%的行数据，X_test包含了剩下的25%的行数据</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;X_train shape:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(X_train.shape))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;y_train shape:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(y_train.shape))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;X_test shape:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(X_test.shape))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;y_test shape:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(y_test.shape))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用pandas绘制散点图的函数是scatter_matrix</span></span><br><span class="line"><span class="comment"># 利用X_train中的数据创建DataFrame</span></span><br><span class="line"><span class="comment"># 利用iris_dataset.feature_names中的字符串对数据列进行标记</span></span><br><span class="line">iris_dataframe = pd.DataFrame(X_train, columns=iris_dataset.feature_names)</span><br><span class="line"><span class="comment"># 利用DataFrame创建散点图矩阵，按照y_train着色</span></span><br><span class="line">grr = pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(<span class="number">15</span>, <span class="number">15</span>), marker=<span class="string">&#x27;o&#x27;</span>, hist_kwds=&#123;<span class="string">&#x27;bins&#x27;</span>: <span class="number">20</span>&#125;, s=<span class="number">60</span>,</span><br><span class="line">                                 alpha=<span class="number">0.8</span>,</span><br><span class="line">                                 cmap=mglearn.cm3)</span><br><span class="line">plt.savefig(<span class="string">&quot;鸢尾花.png&quot;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建k近邻算法模型</span></span><br><span class="line"><span class="comment"># k近邻分类器方法：要对一个新的数据点做出预测，算法会在训练集中寻找与这个新数据点距离最近的数据点，然后将找到的数据点标签赋值给这个新数据点</span></span><br><span class="line"><span class="comment"># k的含义：我们可以考虑训练集中与新数据点最近的任意k个邻居，而不是只考虑最近的哪一个</span></span><br><span class="line"><span class="comment"># k临近算法在neighbors模块的KNeighborsClassifier类中进行实现，通过n_neighbors= 来确定k的数量</span></span><br><span class="line"></span><br><span class="line">knn = KNeighborsClassifier(n_neighbors=<span class="number">1</span>)  <span class="comment"># 使用knn对象来对算法进行封装，对于KNeighborsClassifier来说其中只保存了训练集</span></span><br><span class="line">knn.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过训练集来构建模型需要通过knn对象的fit方法进行拟合，输入参数X_train和y_train两个Numpy数组，前者包括训练数据，后者包括相对应的训练标签</span></span><br><span class="line">KNeighborsClassifier(algorithm=<span class="string">&#x27;auto&#x27;</span>, leaf_size=<span class="number">30</span>, metric=<span class="string">&#x27;minkowski&#x27;</span>, metric_params=<span class="literal">None</span>, n_jobs=<span class="number">1</span>, n_neighbors=<span class="number">1</span>,</span><br><span class="line">                     p=<span class="number">2</span>, weights=<span class="string">&#x27;uniform&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进行预测</span></span><br><span class="line"></span><br><span class="line">X_new = np.array([[<span class="number">5</span>, <span class="number">2.9</span>, <span class="number">1</span>, <span class="number">0.2</span>]])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;X_new.shape:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(X_new.shape))  <span class="comment"># 将花的测量值数据转换为二维Numpy数组的一行，因为scikit-learn的输入数据必须是二维数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用knn对象的predict方法来进行预测</span></span><br><span class="line">prediction = knn.predict(X_new)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Prediction:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(prediction))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Predicted target name:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(iris_dataset[<span class="string">&#x27;target_names&#x27;</span>][prediction]))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 评估模型</span></span><br><span class="line"><span class="comment"># 对测试数据中每朵花进行预测，并将预测结果和标签进行比对，通过计算 精度(accuracy) 来衡量模型的优劣</span></span><br><span class="line"></span><br><span class="line">y_pred = knn.predict(X_test)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Test set predictions:\n&#123;&#125;&quot;</span>.<span class="built_in">format</span>(y_pred))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Test set score:&#123;:.2f&#125;&quot;</span>.<span class="built_in">format</span>(np.mean(y_pred == y_test)))    <span class="comment"># 方法1，准确率97%</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Test set score:&#123;:.2f&#125;&quot;</span>.<span class="built_in">format</span>(knn.score(X_test, y_test)))    <span class="comment"># 方法2，准确率97%</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>白猫_wHCat
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://whcat0530.github.io/2022/05/11/%E9%B8%A2%E5%B0%BE%E8%8A%B1%E6%A8%A1%E5%9E%8B/" title="Python基础语法案例01">https://whcat0530.github.io/2022/05/11/鸢尾花模型/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/sklearn/" rel="tag"># sklearn</a>
+              <a href="/tags/matplotlib/" rel="tag"># matplotlib</a>
+              <a href="/tags/pandas/" rel="tag"># pandas</a>
+              <a href="/tags/numpy/" rel="tag"># numpy</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/04/20/LeetCode%E7%AE%97%E6%B3%95_%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB/" rel="prev" title="LeetCode算法_字符的最短距离">
+      <i class="fa fa-chevron-left"></i> LeetCode算法_字符的最短距离
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白猫_wHCat"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">白猫_wHCat</p>
+  <div class="site-description" itemprop="description">正在学习摆烂的博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wHCat0530" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wHCat0530" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wHCat0530@gmail.com" title="E-Mail → mailto:wHCat0530@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com&#x2F;" rel="noopener" target="_blank">Github</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="/www.baidu.com" title="www.baidu.com">百度</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.csdn.net/" title="https:&#x2F;&#x2F;www.csdn.net&#x2F;" rel="noopener" target="_blank">CSDN</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://leetcode-cn.com/" title="https:&#x2F;&#x2F;leetcode-cn.com&#x2F;" rel="noopener" target="_blank">LeetCode</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">留给备案号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wHCat</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">15k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">14 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
