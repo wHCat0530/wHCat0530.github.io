@@ -241,7 +241,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #51d3ec 0%, #51d3ec 100%);
 }
 
 .text-color {
@@ -249,7 +249,7 @@ mark {
 }
 
 .white-color {
-    color: #fff;
+    color: #cbbff8; /*更改*/
 }
 
 .progress-bar {
@@ -1460,7 +1460,7 @@ thead {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 4px #808080, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);      /*更改*/
 }
 
 @media only screen and (min-width: 900px) {
