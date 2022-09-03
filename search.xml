@@ -42,10 +42,39 @@
       
       <categories>
           
+          <category> Diary </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unity游戏开发笔记</title>
+      <link href="/2022/09/03/unity-xiang-mu-zuo-ye-zhi-sheng-ji/"/>
+      <url>/2022/09/03/unity-xiang-mu-zuo-ye-zhi-sheng-ji/</url>
+      
+        <content type="html"><![CDATA[<h3 id="课程要求"><a href="#课程要求" class="headerlink" title="课程要求"></a>课程要求</h3><p>该项目要求制作一个可以进行飞行的直升机，具体内容包括直升机的移动以及螺旋桨的转动两个模块</p><p>其中直升机的移动模块通过 transform.position 模块进行实现，螺旋桨转动通过 transform.Rotate 模块进行实现</p><h3 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h3><p>项目使用Unity免费素材Police Helicopter中的Helicopter模型，该模型除主要机体外还分为Main_Rotor和Tail_Rotor两个螺旋桨。</p><h3 id="模型移动"><a href="#模型移动" class="headerlink" title="模型移动"></a>模型移动</h3><p>该项目模型移动通过了transform.Translate对模型的坐标进行移动从而实现整体模型的移动，并且移动模式通过if(Input.GetKey)函数来进行键盘输入判断，若接收相应按键则产生移动反馈。</p><h5 id="具体反馈如下："><a href="#具体反馈如下：" class="headerlink" title="具体反馈如下："></a>具体反馈如下：</h5><h6 id="Space：上升、LeftShift：下降、W：向前移动、S：向后移动、A：向左平移、D：向右平移、Z：向左转向、C：向右转向"><a href="#Space：上升、LeftShift：下降、W：向前移动、S：向后移动、A：向左平移、D：向右平移、Z：向左转向、C：向右转向" class="headerlink" title="Space：上升、LeftShift：下降、W：向前移动、S：向后移动、A：向左平移、D：向右平移、Z：向左转向、C：向右转向"></a>Space：上升、LeftShift：下降、W：向前移动、S：向后移动、A：向左平移、D：向右平移、Z：向左转向、C：向右转向</h6><h5 id="具体脚本如下："><a href="#具体脚本如下：" class="headerlink" title="具体脚本如下："></a>具体脚本如下：</h5><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// Helicopter.csusing System.Collections;using System.Collections.Generic;using UnityEngine;public class Helicopter : MonoBehaviour{    public float upSpeed = 10f;    public float forwardSpeed = 10f;    public float downSpeed = 10f;    public float leftSpeed = 10f;    public float rightSpeed = 10f;    public float leftRotate = 10f;    // Start is called before the first frame update    void Start()    {            }    // Update is called once per frame    void Update()    {        if(Input.GetKey(KeyCode.Space))        {            transform.Translate(Vector3.up * upSpeed * Time.deltaTime);        }        if(Input.GetKey(KeyCode.LeftShift))        {            transform.Translate(Vector3.down * downSpeed * Time.deltaTime);        }        if(Input.GetKey(KeyCode.W))        {            transform.Translate(Vector3.forward*forwardSpeed * Time.deltaTime);        }        if(Input.GetKey(KeyCode.S))        {            transform.Translate(Vector3.back*forwardSpeed * Time.deltaTime);        }        if (Input.GetKey(KeyCode.A))        {            transform.Translate(Vector3.left * leftSpeed * Time.deltaTime);        }        if (Input.GetKey(KeyCode.D))        {            transform.Translate(Vector3.right * leftSpeed * Time.deltaTime);        }        if(Input.GetKey(KeyCode.Z))        {            transform.Rotate(Vector3.up * leftRotate * Time.deltaTime);        }        if (Input.GetKey(KeyCode.C))        {            transform.Rotate(Vector3.down * leftRotate * Time.deltaTime);        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>该项目的摄像机进行了自动跟随处理，具体脚本处理来源网络资源</p><h5 id="具体脚本如下：-1"><a href="#具体脚本如下：-1" class="headerlink" title="具体脚本如下："></a>具体脚本如下：</h5><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">// Camera_Demo.csusing System.Collections;using System.Collections.Generic;using UnityEngine;public class Camera_Demo : MonoBehaviour{    public Transform target;    public float distanceUp = 15f;    public float distanceAway = 10f;    public float smooth = 2f;    public float camDepthSmooth = 5f;    // Start is called before the first frame update    void Start()    {            }    // Update is called once per frame    void Update()    {        // 鼠标轴控制相机的远近        if ((Input.mouseScrollDelta.y &lt; 0 &amp;&amp; Camera.main.fieldOfView &gt;= 3) || Input.mouseScrollDelta.y &gt; 0 &amp;&amp; Camera.main.fieldOfView &lt;= 80)        {            Camera.main.fieldOfView += Input.mouseScrollDelta.y * camDepthSmooth * Time.deltaTime;        }    }    void LateUpdate()    {        //相机的位置        Vector3 disPos = target.position + Vector3.up * distanceUp - target.forward * distanceAway; transform.position = Vector3.Lerp(transform.position, disPos, Time.deltaTime * smooth);        //相机的角度        transform.LookAt(target.position);    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>项目直升机双螺旋桨的旋转过程通过建立直升机螺旋桨对象propellerObj，通过transform.Rotate函数进行旋转。</p><h5 id="具体脚本代码如下："><a href="#具体脚本代码如下：" class="headerlink" title="具体脚本代码如下："></a>具体脚本代码如下：</h5><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">// Rotor_Main.cs// Rotor_Tail.csusing System.Collections;using System.Collections.Generic;using UnityEngine;public class Rotor_Main : MonoBehaviour{    /// &lt;summary&gt;    /// 直升机螺旋桨对象    /// &lt;/summary&gt;    public GameObject propellerObj;    // Start is called before the first frame update    void Start()    {            }    // Update is called once per frame    void Update()    {        propellerObj.transform.Rotate(Vector3.up * 2000 * Time.deltaTime);    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h5 id="以下是项目具体运行以及部分操作演示"><a href="#以下是项目具体运行以及部分操作演示" class="headerlink" title="以下是项目具体运行以及部分操作演示"></a>以下是项目具体运行以及部分操作演示</h5><p><video src="C:\Users\zcqc4\Desktop\1662208394000.mp4"></video></p>]]></content>
+      
+      
+      <categories>
+          
           <category> Unity </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Unity </tag>
+            
+            <tag> 游戏开发 </tag>
+            
+        </tags>
       
     </entry>
     
