@@ -381,7 +381,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    258
                 </div>
                 
 
@@ -411,7 +411,40 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="模型移动"><a href="#模型移动" class="headerlink" title="模型移动"></a>模型移动</h2><p>通过 transform.Translate 函数来对模型进行移动操作</p>
+<p>实现如下</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">transform.Translate(Vector3.up*upSpeed*Time.deltaTime);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>其中在Vector3中对应的坐标可以通过以下操作对应</p>
+<ul>
+<li>back 对应 Vector3(0,0,-1)</li>
+<li>down 对应 Vector3(0,-1,0)</li>
+<li>forward 对应 Vector3(0,0,1)</li>
+<li>left 对应 Vector3(-1,0,0)</li>
+<li>one 对应 Vector3(1,1,1)</li>
+<li>right 对应 Vector3(0,1,0)</li>
+<li>up 对应 Vector3(0,1,0)</li>
+<li>zero 对应 Vector3(0,0,0)</li>
+</ul>
+<p>通过 transform.Rotate 函数来对模型进行旋转操作</p>
+<p>实现如下</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">propellerObj.transform.Rotate(Vector3.up*2000*Time.deltaTime)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h2 id="键盘接受与反馈"><a href="#键盘接受与反馈" class="headerlink" title="键盘接受与反馈"></a>键盘接受与反馈</h2><p>通过 Input.GetKey 来持续接受（按住）时返回true</p>
+<p>通过 Input.GetKeyDown 来接受用户按下的那一帧返回true</p>
+<p>通过 Input.GetKeyUp 来接受用户释放的那一帧返回true</p>
+<p>实现如下</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">Input.GetKey(keyCode.space)
+Input.GetKeyDown(KeyCode.space)
+Input.GetKeyUp(KeyCode.space)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="读取上一帧所需要的时间实现移动"><a href="#读取上一帧所需要的时间实现移动" class="headerlink" title="读取上一帧所需要的时间实现移动"></a>读取上一帧所需要的时间实现移动</h2><p>通过 Time.deltaTime 函数来读取上一帧所用的时间（以秒为单位）</p>
+<p>实现如下</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">propellerObj.transform.Rotate(Vector3.up*2000*Time.deltaTime)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -767,7 +800,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">780</span>
+                        class="white-color">5.9k</span>
             
             
             
