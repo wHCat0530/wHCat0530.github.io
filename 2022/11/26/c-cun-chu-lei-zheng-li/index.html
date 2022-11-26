@@ -4,8 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Unity游戏开发笔记, 白猫wHCat">
-    <meta name="description" content="文章是根据Unity开发课程学习并记录的开发笔记">
+    <meta name="keywords" content="C++存储类整理, 白猫wHCat">
+    <meta name="description" content="C++存储类介绍存储类定义C++程序中变量/函数的范围（可见性）和生命周期。这些说明符放置在他们所修饰的类型之前，其中C++可用的存储类包括
+
+auto
+register
+static
+extern
+mutable
+thread_local">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +24,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Unity游戏开发笔记 | 白猫wHCat</title>
+    <title>C++存储类整理 | 白猫wHCat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -312,12 +319,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Unity游戏开发笔记</h1>
+                    <h1 class="description center-align post-title">C++存储类整理</h1>
                 </div>
             </div>
         </div>
@@ -340,15 +347,7 @@
                     <div class="article-tag">
                         
                             <a href="/tags/C/">
-                                <span class="chip bg-color">C#</span>
-                            </a>
-                        
-                            <a href="/tags/Unity/">
-                                <span class="chip bg-color">Unity</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
-                                <span class="chip bg-color">游戏开发</span>
+                                <span class="chip bg-color">C++</span>
                             </a>
                         
                     </div>
@@ -359,8 +358,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Unity/" class="post-category">
-                                Unity
+                            <a href="/categories/C/" class="post-category">
+                                C++
                             </a>
                         
                     </div>
@@ -372,7 +371,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-09-03
+                    2022-11-26
                 </div>
                 
 
@@ -381,7 +380,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.4k
                 </div>
                 
 
@@ -411,217 +410,131 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="模型移动"><a href="#模型移动" class="headerlink" title="模型移动"></a>模型移动</h2><p>通过 transform.Translate 函数来对模型进行移动操作</p>
-<p>实现如下</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">transform.Translate(Vector3.up*upSpeed*Time.deltaTime);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>其中在Vector3中对应的坐标可以通过以下操作对应</p>
+                <h3 id="C-存储类介绍"><a href="#C-存储类介绍" class="headerlink" title="C++存储类介绍"></a>C++存储类介绍</h3><p>存储类定义C++程序中变量/函数的范围（可见性）和生命周期。这些说明符放置在他们所修饰的类型之前，其中C++可用的存储类包括</p>
 <ul>
-<li>back 对应 Vector3(0,0,-1)</li>
-<li>down 对应 Vector3(0,-1,0)</li>
-<li>forward 对应 Vector3(0,0,1)</li>
-<li>left 对应 Vector3(-1,0,0)</li>
-<li>one 对应 Vector3(1,1,1)</li>
-<li>right 对应 Vector3(0,1,0)</li>
-<li>up 对应 Vector3(0,1,0)</li>
-<li>zero 对应 Vector3(0,0,0)</li>
+<li>auto</li>
+<li>register</li>
+<li>static</li>
+<li>extern</li>
+<li>mutable</li>
+<li>thread_local(C++11)</li>
 </ul>
-<p>通过 transform.Rotate 函数来对模型进行旋转操作</p>
-<p>实现如下</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">propellerObj.transform.Rotate(Vector3.up*2000*Time.deltaTime)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>其中auto关键字已经不再是C++存储类的说明符，并且register关键字已经被弃用</p>
+</blockquote>
+<h5 id="auto存储类"><a href="#auto存储类" class="headerlink" title="auto存储类"></a>auto存储类</h5><p>从C++11之后，auto关键字主要用于两种情况：声明变量时根据初始化表达式自动推断该变量的类型、声明函数时函数返回值的占位符</p>
+<p>C++98标准中的auto关键字用于自动变量的生命，但是使用量少，所以在C++11中已经删除了这一用法</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">auto</span> f<span class="token operator">=</span><span class="token number">3.14</span><span class="token punctuation">;</span>	<span class="token comment">//double</span>
+<span class="token keyword">auto</span> <span class="token function">s</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//const char*</span>
+<span class="token keyword">auto</span> z<span class="token operator">=</span><span class="token keyword">new</span> <span class="token keyword">auto</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//int</span>
+<span class="token keyword">auto</span> x1 <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span> x2 <span class="token operator">=</span> <span class="token number">5.0</span><span class="token punctuation">,</span> x3 <span class="token operator">=</span> <span class="token char">'r'</span><span class="token punctuation">;</span>	<span class="token comment">//错误，必须是初始化为同一类型</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h5 id="register存储类"><a href="#register存储类" class="headerlink" title="register存储类"></a>register存储类</h5><p>register存储类用于定义存储在寄存器中而不是RAM中的局部变量，这意味着遍历啊那个的最大尺寸等于寄存器的大小（通常是一个词），并且不能对它引用一元运算符‘&amp;’（因为该存储类没有内存位置）</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token punctuation">{</span>
+	<span class="token keyword">register</span> <span class="token keyword">int</span> miles<span class="token punctuation">;</span>	
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<p>寄存器只用于需要快速访问的变量，比如计数器。并且在定义’register’并不意味着变量将被存储在寄存器中，它意味着变量可能存储在寄存器中，这取决于硬件和实现的限制。</p>
+<h5 id="static存储类"><a href="#static存储类" class="headerlink" title="static存储类"></a>static存储类</h5><p>static存储来知识编译器在程序的生命周期内保持局部变量的存在，而不需要在每次它进入和离开作用域时进行创建和销毁。因此，使用static修饰局部变量可以在函数调用之间保持局部变量的值</p>
+<p>static修饰符也可以应用于全局变量。当static修饰全局变量时，会使变量的作用域限制在声明他的文件内</p>
+<p>在C++中，当static用在类数据成员上时，会导致仅有一个该成员的副本被类的所有对象共享</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
 
-<h2 id="键盘接受与反馈"><a href="#键盘接受与反馈" class="headerlink" title="键盘接受与反馈"></a>键盘接受与反馈</h2><p>通过 Input.GetKey 来持续接受（按住）时返回true</p>
-<p>通过 Input.GetKeyDown 来接受用户按下的那一帧返回true</p>
-<p>通过 Input.GetKeyUp 来接受用户释放的那一帧返回true</p>
-<p>实现如下</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">Input.GetKey(keyCode.space)
-Input.GetKeyDown(KeyCode.space)
-Input.GetKeyUp(KeyCode.space)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">// 函数声明</span>
+<span class="token keyword">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
 
-<h2 id="读取上一帧所需要的时间实现移动"><a href="#读取上一帧所需要的时间实现移动" class="headerlink" title="读取上一帧所需要的时间实现移动"></a>读取上一帧所需要的时间实现移动</h2><p>通过 Time.deltaTime 函数来读取上一帧所用的时间（以秒为单位）</p>
-<p>实现如下</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">propellerObj.transform.Rotate(Vector3.up*2000*Time.deltaTime)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token keyword">static</span> <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>	<span class="token comment">// 全局变量</span>
 
-<h2 id="实现固定时间的运行方法"><a href="#实现固定时间的运行方法" class="headerlink" title="实现固定时间的运行方法"></a>实现固定时间的运行方法</h2><p>该方法实现了固定时间运行的方法，一般来说默认运行时0.02秒代表50帧，也就是一秒可以运行50次</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">void FivedUpdate()
-{}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>count<span class="token operator">--</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+ 		<span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 	<span class="token punctuation">}</span>
+ 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 函数定义</span>
+<span class="token keyword">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">static</span> <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>	<span class="token comment">// 局部静态变量</span>
+	i<span class="token operator">++</span><span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"变量 i 为"</span> <span class="token operator">&lt;&lt;</span> i<span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">" ,变量 count 为"</span> <span class="token operator">&lt;&lt;</span> count <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="实现螺旋桨匀速启动的办法"><a href="#实现螺旋桨匀速启动的办法" class="headerlink" title="实现螺旋桨匀速启动的办法"></a>实现螺旋桨匀速启动的办法</h2><p>通过创建螺旋桨的初始速度以及螺旋桨加速度的方法，与Time.deltaTime乘积求和的方法实现螺旋桨的匀速启动</p>
-<p>实现如下</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public GameObject rotorObj;	// 螺旋桨物体
-public float rotSpeed=0f;	// 螺旋桨初始速度
-public float rotAcceleration=5f;	// 旋转加速度
-void Update()
-{
-	rotSpeed+=rotAcceleration*Time.deltaTime;
-	rotorObj.transform.Rotate(Vector3.up*rotSpeed*Time.deltaTime);
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>调用后运行结果</p>
+<blockquote>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">变量 i 为 <span class="token number">6</span><span class="token punctuation">,</span> 变量 count 为 <span class="token number">9</span>
+变量 i 为 <span class="token number">7</span><span class="token punctuation">,</span> 变量 count 为 <span class="token number">8</span>
+变量 i 为 <span class="token number">8</span><span class="token punctuation">,</span> 变量 count 为 <span class="token number">7</span>
+变量 i 为 <span class="token number">9</span><span class="token punctuation">,</span> 变量 count 为 <span class="token number">6</span>
+变量 i 为 <span class="token number">10</span><span class="token punctuation">,</span> 变量 count 为 <span class="token number">5</span>
+变量 i 为 <span class="token number">11</span><span class="token punctuation">,</span> 变量 count 为 <span class="token number">4</span>
+变量 i 为 <span class="token number">12</span><span class="token punctuation">,</span> 变量 count 为 <span class="token number">3</span>
+变量 i 为 <span class="token number">13</span><span class="token punctuation">,</span> 变量 count 为 <span class="token number">2</span>
+变量 i 为 <span class="token number">14</span><span class="token punctuation">,</span> 变量 count 为 <span class="token number">1</span>
+变量 i 为 <span class="token number">15</span><span class="token punctuation">,</span> 变量 count 为 <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+<h5 id="extern存储类"><a href="#extern存储类" class="headerlink" title="extern存储类"></a>extern存储类</h5><p>extern存储类用于提供一个全局变量的引用，全局变量对所有的程序文件都是可见的。当您使用’extern’时，对于无法初始化的变量，会把变量名指向一个之前定义过的存储位置。</p>
+<p>当有多个文件且定义了一个可以在其他文件中使用的全局变量或函数时，可以在其他文件中使用extern来得到一定义的变量或函数的引用。可以这么理解，extern是用来在另一个文件中声明一个全局变量或函数</p>
+<p>extern修饰符通常用于当有两个或多个文件共享相同的全局变量或函数的时候</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// main.cpp</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
 
-<h2 id="通过接受键盘反馈来实现真假切换实现启动-x2F-关闭灯光"><a href="#通过接受键盘反馈来实现真假切换实现启动-x2F-关闭灯光" class="headerlink" title="通过接受键盘反馈来实现真假切换实现启动/关闭灯光"></a>通过接受键盘反馈来实现真假切换实现启动/关闭灯光</h2><p>利用取非来实现真假切换</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">public GameObject lightObj;
-public bool islightOnOff=false;
-void Update()
-{
-	if(Input.GetKeyDown(KetCode.B))
-	{
-		islightOnOff=!islightOnOff;	// 利用取非来实现真假切换
-		if(lightObj!=null)	}
-		{
-			// SetActive用来激活物体
-			lightObj.SetActive(islightOnOff);
-		}
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">int</span> count<span class="token punctuation">;</span>
+<span class="token keyword">extern</span> <span class="token keyword">void</span> <span class="token function">write_extern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<h2 id="C-怎么接收输出文字"><a href="#C-怎么接收输出文字" class="headerlink" title="C#怎么接收输出文字"></a>C#怎么接收输出文字</h2><p>接收文字实现如下</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">Console.ReadKey();<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	count <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+	<span class="token function">write_extern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>输出文字实现如下</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">Console.WriteLine();<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// support.cpp</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
 
-<h2 id="Switch开关语句的与枚举的使用"><a href="#Switch开关语句的与枚举的使用" class="headerlink" title="Switch开关语句的与枚举的使用"></a>Switch开关语句的与枚举的使用</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 枚举部分
-public enum Status
-    {
-        ZeroEngine, // 停机状态
-        RunEngine,  // 启动状态
-        TakeOff,    // 起飞状态
-        FlyForward, //平飞状态
-        Landing // 降落状态
-    }
-// 使用部分
- switch (helicopterStatus)   // 必须保证有明确的值
-        {
-            case Status.ZeroEngine:
-                print("飞机处于停机状态");
-                rotAcceleration = -200f;
-                break;
-            case Status.RunEngine:
-                print("飞机处于启动状态");
-                rotAcceleration = 200f;
-                break;
-            case Status.TakeOff:
-                print("飞机处于起飞状态");
-                transform.Translate(Vector3.up * 3f * Time.deltaTime);
-                rotAcceleration = 0f;
-                break;
-            case Status.FlyForward:
-                print("飞机处于平飞状态");
-                transform.Translate(Vector3.forward * 5f * Time.deltaTime);
-                break;
-            case Status.Landing:
-                print("飞机处于降落状态");
-                if (transform.position.y &gt;= 0)
-                {
-                    transform.Translate(Vector3.down * 3f * Time.deltaTime);
-                }
-                else
-                {
-                    rotAcceleration = -200f;
-                    isOnOff = false;
-                }
-                break;
-        }
-    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">extern</span> <span class="token keyword">int</span> count<span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">write_extern</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Count is"</span> <span class="token operator">&lt;&lt;</span> count <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="定时器的使用"><a href="#定时器的使用" class="headerlink" title="定时器的使用"></a>定时器的使用</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">//调用
-StartCoroutine(OnTime(0.5f));
+<p>在第二个文件中extern的关键字用于声明已经在第一个文件中main.cpp中定义的count，在编译后会发现生成为</p>
+<blockquote>
+<p>Count is 5</p>
+</blockquote>
+<h5 id="mutable存储类"><a href="#mutable存储类" class="headerlink" title="mutable存储类"></a>mutable存储类</h5><p>mutable说明符仅适用于类的对象，它允许对象的成员替换常量。由此可知mutable成员可以通过const成员函数修改</p>
+<h5 id="thread-local存储类"><a href="#thread-local存储类" class="headerlink" title="thread_local存储类"></a>thread_local存储类</h5><p>thread_local说明符声明的变量仅可在它上创建的线程上访问，变量在创建线程的时候创建，在销毁线程是销毁。</p>
+<p>每个线程都有自己的变量副本</p>
+<p>thread_local说明符可以和static或extern合并</p>
+<p>可以将thread_local仅应用于数据声明和定义，thread_local不能用于函数声明或定义</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">thread_local</span> <span class="token keyword">int</span> x<span class="token punctuation">;</span>	<span class="token comment">// 命名空间下的全局变量</span>
+<span class="token keyword">class</span> <span class="token class-name">X</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">static</span> <span class="token keyword">thread_local</span> std<span class="token double-colon punctuation">::</span>string s<span class="token punctuation">;</span>	<span class="token comment">// 类的static成员变量</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">static</span> <span class="token keyword">thread_local</span> std<span class="token double-colon punctuation">::</span>string X<span class="token double-colon punctuation">::</span>s<span class="token punctuation">;</span>	<span class="token comment">// X::s是需要定义的</span>
 
-// 定义
-IEnumerator OnTime(float time)
-    {
-        while (true)
-        {
-            // yield是挂起cpu
-            yield return new WaitForSeconds(time);
-            // 生成怪物的方法
-            CreateMonsters(transform.position);
-        }
-    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">void</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">thread_local</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> v<span class="token punctuation">;</span>	<span class="token comment">//本地变量</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h2><p>通过Random.Range()进行随机数的生成</p>
-<p>实际使用如下</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">if (bombObj != null)
-        {
-            float x = Random.Range(-10f, 10f);
-            float z = Random.Range(-10f, 10f);
-            Instantiate(bombObj, pos + new Vector3(x, 0f, z), Quaternion.identity);   // 实例化
-        }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="Lambda函数与表达式"><a href="#Lambda函数与表达式" class="headerlink" title="Lambda函数与表达式"></a>Lambda函数与表达式</h5><p>Lambda被称为匿名函数，其中Lambda表达式把函数看作对象，其表达式可以像对象一样使用，如可以给它们赋值变量和作为参数传递，还可以像函数一样对其求值。</p>
+<p>Lambda表达式本质上与函数声明非常类似。Lambda表达式的具体形式如下</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token punctuation">[</span>capture<span class="token punctuation">]</span><span class="token punctuation">(</span>parameters<span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token keyword">return</span><span class="token operator">-</span>type<span class="token punctuation">{</span>body<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="指定位置生成物体"><a href="#指定位置生成物体" class="headerlink" title="指定位置生成物体"></a>指定位置生成物体</h2><p>通过Instantiate进行生成</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">Instantiate(brickObj, new Vector3(0f, 0.5f, 0f), Quaternion.identity);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> x <span class="token operator">&lt;</span> y<span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>可以通过配合for循环可以生成一面墙等</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">for (int i = 0; i &lt; 10; i++)
-        {
-            for (int j = 0; j &lt; 10; j++)
-            {
-                Instantiate(brickObj, new Vector3(i, j+0.5f, 0f), Quaternion.identity);
-            }
-        } <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果没有返回值可以表示为</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token punctuation">[</span>capture<span class="token punctuation">]</span><span class="token punctuation">(</span>parameters<span class="token punctuation">)</span><span class="token punctuation">{</span>body<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>也可以通过if判断实隔位生成</p>
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">for(int i=0;i&lt;=10 ;i++)  
-       {
-           if(i%2==0)
-           {
-               continue;
-           }
-           Instantiate(brickObj, new Vector3(i, 0.5f, 0f), Quaternion.identity);
-       }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>例如</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token operator">++</span>global_x<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="动画器基本操作"><a href="#动画器基本操作" class="headerlink" title="动画器基本操作"></a>动画器基本操作</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 获取动画器
-void Start()
-{
-	animator = GetComponent&lt;Animator&gt;();
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 动画器的调用
-// 其中isAttack是设置的参数，true代表参数的值
-animator.SetBool("isAttack",true)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="数组的基本操作"><a href="#数组的基本操作" class="headerlink" title="数组的基本操作"></a>数组的基本操作</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 数组的定义
-public GameObject[] mathName;
-// 给数组开辟内存
-mathName = new GameObject[n];
-// 数组实例化存放
-mathName[index++] = obj;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="触发器的基本操作"><a href="#触发器的基本操作" class="headerlink" title="触发器的基本操作"></a>触发器的基本操作</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 当触发器进入事件的时候，只有当物体进入的时候执行一次
-private void OnTriggerEnter(Collider other)
-{
-	print("执行一次");
-}
-
-// 当触发器进入事件的时候，当物体进入时一直执行
-private void OnTriggerStay(Collider other)
-{
-	print("持续执行");
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="标签引用"><a href="#标签引用" class="headerlink" title="标签引用"></a>标签引用</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 例如获取地图上带有Enemy标签物体的引用，并且存放到数组中
-enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h2 id="返回距离玩家最近的敌人的实例"><a href="#返回距离玩家最近的敌人的实例" class="headerlink" title="返回距离玩家最近的敌人的实例"></a>返回距离玩家最近的敌人的实例</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">GameObject MinDistanceToPlayer(GameObject[] objArr)
-{
-	float minSqrDistance=Mathf.Infinity;	// Mathf.Infinity代表正无穷
-	GamemObject closestObj = null;	// 最近物体
-	for(int i = 0;i&lt;enemyArrInMap.Length;i++)
-	{
-		// 每个敌人的位置
-		var enemyPos = objArr[i].transform.position;
-		// 每个敌人与玩家的平方距离
-		var sqrLength = (enemyPos - transform.position).sqrMagnitude;
-		// 比较距离
-		if(sqrLength &lt; minSqrDistance)
-		{
-			// 替换较小的值
-			minSqrDistance = sqrLength;		
-			closestObj = objArr[i];
-		}
-	}
-	return closestObj;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在一个更复杂的例子中，返回类型可以被明确的制定如下</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token keyword">int</span><span class="token punctuation">{</span><span class="token keyword">int</span> z <span class="token operator">=</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span> <span class="token keyword">return</span> z <span class="token operator">+</span> x<span class="token punctuation">;</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
                 
@@ -649,7 +562,7 @@ enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="tru
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wHCat0530.github.io/2022/09/03/unity-you-xi-kai-fa-bi-ji/">http://wHCat0530.github.io/2022/09/03/unity-you-xi-kai-fa-bi-ji/</a>
+                    <a href="http://wHCat0530.github.io/2022/11/26/c-cun-chu-lei-zheng-li/">http://wHCat0530.github.io/2022/11/26/c-cun-chu-lei-zheng-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -688,15 +601,7 @@ enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="tru
                         <div class="article-tag">
                             
                                 <a href="/tags/C/">
-                                    <span class="chip bg-color">C#</span>
-                                </a>
-                            
-                                <a href="/tags/Unity/">
-                                    <span class="chip bg-color">Unity</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
-                                    <span class="chip bg-color">游戏开发</span>
+                                    <span class="chip bg-color">C++</span>
                                 </a>
                             
                         </div>
@@ -775,54 +680,48 @@ enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="tru
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/09/03/unity-xiang-mu-zuo-ye-zhi-sheng-ji/">
+                <a href="/2022/11/26/c-cun-chu-lei-zheng-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Unity项目作业_直升机">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="C++存储类整理">
                         
-                        <span class="card-title">Unity项目作业_直升机</span>
+                        <span class="card-title">C++存储类整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            根据首周Unity课程作业所编写直升机
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Unity/" class="post-category">
-                                    Unity
+                            <a href="/categories/C/" class="post-category">
+                                    C++
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/C/">
-                        <span class="chip bg-color">C#</span>
-                    </a>
-                    
-                    <a href="/tags/Unity/">
-                        <span class="chip bg-color">Unity</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">游戏开发</span>
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>
@@ -836,31 +735,31 @@ enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="tru
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/09/03/unity-you-xi-kai-fa-bi-ji-fu-ben/">
+                <a href="/2022/11/26/c-zhi-zhen-zheng-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Unity游戏开发笔记">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="C++指针整理">
                         
-                        <span class="card-title">Unity游戏开发笔记</span>
+                        <span class="card-title">C++指针整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            文章是根据Unity开发课程学习并记录的开发笔记
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Unity/" class="post-category">
-                                    Unity
+                            <a href="/categories/C/" class="post-category">
+                                    C++
                                 </a>
                             
                             
@@ -871,15 +770,7 @@ enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="tru
                 <div class="card-action article-tags">
                     
                     <a href="/tags/C/">
-                        <span class="chip bg-color">C#</span>
-                    </a>
-                    
-                    <a href="/tags/Unity/">
-                        <span class="chip bg-color">Unity</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">游戏开发</span>
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>

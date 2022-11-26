@@ -381,14 +381,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    869
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    3 分
                 </div>
                 
 
@@ -525,19 +525,18 @@ public enum Status
     }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="定时器的使用"><a href="#定时器的使用" class="headerlink" title="定时器的使用"></a>定时器的使用</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">//调用
-StartCoroutine(OnTime(0.5f));
+ StartCoroutine(OnTime(0.5f));
 
 // 定义
 IEnumerator OnTime(float time)
     {
         while (true)
         {
-            // yield是挂起cpu
             yield return new WaitForSeconds(time);
             // 生成怪物的方法
             CreateMonsters(transform.position);
         }
-    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h2><p>通过Random.Range()进行随机数的生成</p>
 <p>实际使用如下</p>
@@ -570,59 +569,6 @@ IEnumerator OnTime(float time)
            Instantiate(brickObj, new Vector3(i, 0.5f, 0f), Quaternion.identity);
        }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="动画器基本操作"><a href="#动画器基本操作" class="headerlink" title="动画器基本操作"></a>动画器基本操作</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 获取动画器
-void Start()
-{
-	animator = GetComponent&lt;Animator&gt;();
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 动画器的调用
-// 其中isAttack是设置的参数，true代表参数的值
-animator.SetBool("isAttack",true)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="数组的基本操作"><a href="#数组的基本操作" class="headerlink" title="数组的基本操作"></a>数组的基本操作</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 数组的定义
-public GameObject[] mathName;
-// 给数组开辟内存
-mathName = new GameObject[n];
-// 数组实例化存放
-mathName[index++] = obj;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="触发器的基本操作"><a href="#触发器的基本操作" class="headerlink" title="触发器的基本操作"></a>触发器的基本操作</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 当触发器进入事件的时候，只有当物体进入的时候执行一次
-private void OnTriggerEnter(Collider other)
-{
-	print("执行一次");
-}
-
-// 当触发器进入事件的时候，当物体进入时一直执行
-private void OnTriggerStay(Collider other)
-{
-	print("持续执行");
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="标签引用"><a href="#标签引用" class="headerlink" title="标签引用"></a>标签引用</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">// 例如获取地图上带有Enemy标签物体的引用，并且存放到数组中
-enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h2 id="返回距离玩家最近的敌人的实例"><a href="#返回距离玩家最近的敌人的实例" class="headerlink" title="返回距离玩家最近的敌人的实例"></a>返回距离玩家最近的敌人的实例</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">GameObject MinDistanceToPlayer(GameObject[] objArr)
-{
-	float minSqrDistance=Mathf.Infinity;	// Mathf.Infinity代表正无穷
-	GamemObject closestObj = null;	// 最近物体
-	for(int i = 0;i&lt;enemyArrInMap.Length;i++)
-	{
-		// 每个敌人的位置
-		var enemyPos = objArr[i].transform.position;
-		// 每个敌人与玩家的平方距离
-		var sqrLength = (enemyPos - transform.position).sqrMagnitude;
-		// 比较距离
-		if(sqrLength &lt; minSqrDistance)
-		{
-			// 替换较小的值
-			minSqrDistance = sqrLength;		
-			closestObj = objArr[i];
-		}
-	}
-	return closestObj;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 
                 
             </div>
@@ -649,7 +595,7 @@ enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="tru
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wHCat0530.github.io/2022/09/03/unity-you-xi-kai-fa-bi-ji/">http://wHCat0530.github.io/2022/09/03/unity-you-xi-kai-fa-bi-ji/</a>
+                    <a href="http://wHCat0530.github.io/2022/09/03/unity-you-xi-kai-fa-bi-ji-fu-ben/">http://wHCat0530.github.io/2022/09/03/unity-you-xi-kai-fa-bi-ji-fu-ben/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -779,19 +725,19 @@ enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="tru
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/09/03/unity-xiang-mu-zuo-ye-zhi-sheng-ji/">
+                <a href="/2022/09/03/unity-you-xi-kai-fa-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Unity项目作业_直升机">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Unity游戏开发笔记">
                         
-                        <span class="card-title">Unity项目作业_直升机</span>
+                        <span class="card-title">Unity游戏开发笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            根据首周Unity课程作业所编写直升机
+                            文章是根据Unity开发课程学习并记录的开发笔记
                         
                     </div>
                     <div class="publish-info">
@@ -836,13 +782,13 @@ enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="tru
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/09/03/unity-you-xi-kai-fa-bi-ji-fu-ben/">
+                <a href="/2022/09/03/yi-ge-quan-xin-de-bo-ke/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Unity游戏开发笔记">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="一个全新的博客">
                         
-                        <span class="card-title">Unity游戏开发笔记</span>
+                        <span class="card-title">一个全新的博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -859,29 +805,13 @@ enemyArrInMap = GameObject.FindGameObjectWithTag("Enemy");<span aria-hidden="tru
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Unity/" class="post-category">
-                                    Unity
+                            <a href="/categories/Diary/" class="post-category">
+                                    Diary
                                 </a>
                             
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C#</span>
-                    </a>
-                    
-                    <a href="/tags/Unity/">
-                        <span class="chip bg-color">Unity</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">游戏开发</span>
-                    </a>
-                    
                 </div>
                 
             </div>

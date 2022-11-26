@@ -1,0 +1,1251 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="软件工程笔记, 白猫wHCat">
+    <meta name="description" content="软件工程课程笔记记录">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>软件工程笔记 | 白猫wHCat</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">白猫wHCat</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">白猫wHCat</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">软件工程笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">
+                                <span class="chip bg-color">软件工程</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" class="post-category">
+                                软件工程
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-09-09
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    17 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h4 id="软件工程是什么"><a href="#软件工程是什么" class="headerlink" title="软件工程是什么"></a>软件工程是什么</h4><p>软件工程是指导计算机软件开发与维护的工程学科，它采用工程的概念、原理、技术和方法来开发与维护软件，把经过时间考验而证明正确的管理技术和当前能够得到的最好的技术方法结合起来，以便经济地开发出高质量的软件并有效地维护它。</p>
+<h4 id="软件工程的主要内容"><a href="#软件工程的主要内容" class="headerlink" title="软件工程的主要内容"></a>软件工程的主要内容</h4><p><strong>方法与技术</strong>：软件开发方法主要讨论软件开发的各种方法及其工作模型。同时讨论具体实现的技术</p>
+<p><strong>工具及环境</strong>：软件工具为软件工程方法提供了支持，研究计算机辅助软件工程CASE，建立软件工程环境</p>
+<p><strong>管理技术</strong>：软件工程管理是指对软件工程全过程的控制和管理，包括计划安排、成本估算、项目管理和软件质量管理</p>
+<p><strong>标准与规范</strong>：软件工程标准化与规范化，使得各层工作有章可循，以保证软件生产率和软件质量的提高</p>
+<h4 id="软件的发展阶段"><a href="#软件的发展阶段" class="headerlink" title="软件的发展阶段"></a>软件的发展阶段</h4><p>程序——程序+文档——软件工程</p>
+<h4 id="软件定义"><a href="#软件定义" class="headerlink" title="软件定义"></a>软件定义</h4><p>软件=程序+数据+文档</p>
+<p>程序：为了解决某个特定问题而用程序设计语言描述的适合计算机处理的语句序列</p>
+<p>数据：使程序正常执行所需、能正常操纵信息的数据结构</p>
+<p>文档：与程序开发、维护和使用有关的图文材料，即软件开发活动的记录</p>
+<h4 id="软件危机的定义"><a href="#软件危机的定义" class="headerlink" title="软件危机的定义"></a>软件危机的定义</h4><p>计算机软件的开发和维护过程所遇到的一系列严重问题。</p>
+<h4 id="软件危机的表现"><a href="#软件危机的表现" class="headerlink" title="软件危机的表现"></a>软件危机的表现</h4><p>对软件开发成本和进度的估算很不准确</p>
+<p>用户很不满意</p>
+<p>质量很不可靠</p>
+<p>没有适当的文档</p>
+<p>软件成本比重上升</p>
+<p>供不应求：软件开发生产率跟不上计算机应用迅速深入的趋势</p>
+<h4 id="软件危机产生原因"><a href="#软件危机产生原因" class="headerlink" title="软件危机产生原因"></a>软件危机产生原因</h4><h5 id="客观原因："><a href="#客观原因：" class="headerlink" title="客观原因："></a>客观原因：</h5><p>软件本身特点</p>
+<p>逻辑部件</p>
+<p>规模庞大</p>
+<p>维护费用急剧上升</p>
+<p>生产技术进步缓慢</p>
+<h5 id="主观原因："><a href="#主观原因：" class="headerlink" title="主观原因："></a>主观原因：</h5><p>不正确的开发方法</p>
+<p>忽视需求分析</p>
+<p>错误认为：软件开发=程序编写</p>
+<p>轻视软件维护</p>
+<h4 id="两类软件工程泛型的简单比较"><a href="#两类软件工程泛型的简单比较" class="headerlink" title="两类软件工程泛型的简单比较"></a>两类软件工程泛型的简单比较</h4><h5 id="传统软件工程"><a href="#传统软件工程" class="headerlink" title="传统软件工程"></a>传统软件工程</h5><p>软件分析——总体设计——详细设计——面向过程的编码——测试</p>
+<h5 id="面向对象软件工程"><a href="#面向对象软件工程" class="headerlink" title="面向对象软件工程"></a>面向对象软件工程</h5><p>软件分析与对象抽取——对象详细设计——面向对象的编码——测试</p>
+<h4 id="软件开发模型"><a href="#软件开发模型" class="headerlink" title="软件开发模型"></a>软件开发模型</h4><h5 id="传统开发模型"><a href="#传统开发模型" class="headerlink" title="传统开发模型"></a>传统开发模型</h5><p>瀑布模型（waterfall model）</p>
+<p>快速原型模型（rapid prototype model）</p>
+<h5 id="演化开发模型"><a href="#演化开发模型" class="headerlink" title="演化开发模型"></a>演化开发模型</h5><p>增量模型（incremental model）</p>
+<p>螺旋模型（spiral model）</p>
+<h5 id="面向对象开发模型"><a href="#面向对象开发模型" class="headerlink" title="面向对象开发模型"></a>面向对象开发模型</h5><p>构件集成模型（component integration model） </p>
+<h5 id="形式化开发模型"><a href="#形式化开发模型" class="headerlink" title="形式化开发模型"></a>形式化开发模型</h5><p>转换模型（transformational model）</p>
+<p>净室模型（cleanroommodel）</p>
+<h4 id="软件生存周期的定义"><a href="#软件生存周期的定义" class="headerlink" title="软件生存周期的定义"></a>软件生存周期的定义</h4><p>一个软件从开始计划起，到废弃不用止，称为软件的生存周期</p>
+<h5 id="包括计划、开发与运行三个时期。"><a href="#包括计划、开发与运行三个时期。" class="headerlink" title="包括计划、开发与运行三个时期。"></a>包括计划、开发与运行三个时期。</h5><p>计划时期：问题定义、可行性研究</p>
+<p>开发时期：需求分析、系统设计、编码和测试</p>
+<p>运行时期：系统维护阶段</p>
+<h4 id="软件工程划分阶段的意义"><a href="#软件工程划分阶段的意义" class="headerlink" title="软件工程划分阶段的意义"></a>软件工程划分阶段的意义</h4><p>简化每一步的工作内容，使因软件规模增大而大大增加的软件复杂性变得易于控制和管理。</p>
+<h4 id="瀑布模型的特点"><a href="#瀑布模型的特点" class="headerlink" title="瀑布模型的特点"></a>瀑布模型的特点</h4><h5 id="阶段间的顺序性和依赖性"><a href="#阶段间的顺序性和依赖性" class="headerlink" title="阶段间的顺序性和依赖性"></a>阶段间的顺序性和依赖性</h5><p>相邻两个阶段有因果关系，要求严格顺序执行</p>
+<p>上一阶段的变换结果是下一阶段变换的输入</p>
+<p>每个阶段都要进行阶段性评审，确认后转下一阶段</p>
+<h5 id="推迟实现的观点"><a href="#推迟实现的观点" class="headerlink" title="推迟实现的观点"></a>推迟实现的观点</h5><p>尽可能推迟软件的编码时间</p>
+<h5 id="质量保证的观点（文档驱动性）"><a href="#质量保证的观点（文档驱动性）" class="headerlink" title="质量保证的观点（文档驱动性）"></a>质量保证的观点（文档驱动性）</h5><p>每个阶段都要完成规定的文档</p>
+<p>每个阶段都要对已完成的文档进行复审，尽早发现问题，消除隐患</p>
+<h4 id="瀑布模型的优缺点"><a href="#瀑布模型的优缺点" class="headerlink" title="瀑布模型的优缺点"></a>瀑布模型的优缺点</h4><h5 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h5><p>可强迫开发人员采用规范的方法</p>
+<p>严格地规定了每个阶段必须提交的文档</p>
+<p>要求每个阶段交出的所有产品都必须经过质量保证小组的仔细验证</p>
+<h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><p>周期长：顺序推进，环环审查</p>
+<p>需求难以准确把握(不能准确提出和沟通、不能快速适应变化的需求)，导致返工甚至推倒重来</p>
+<p>无法预测新引入模块的影响</p>
+<p>最终的形式难以预料</p>
+<p>不适合需求模糊的系统</p>
+<h4 id="快速原型模型的优缺点"><a href="#快速原型模型的优缺点" class="headerlink" title="快速原型模型的优缺点"></a>快速原型模型的优缺点</h4><h5 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h5><p>原型驱动型</p>
+<p>过程的交互性与迭代性</p>
+<h5 id="优点：-1"><a href="#优点：-1" class="headerlink" title="优点："></a>优点：</h5><p>用户在开发过程中可以完善对软件系统的需求</p>
+<p>开发周期相对缩短，成本较低</p>
+<p>有效发挥用户与开发人员之间的密切配合作用</p>
+<p>充分体现逐步发展、逐步完善的原则</p>
+<h5 id="缺点：-1"><a href="#缺点：-1" class="headerlink" title="缺点："></a>缺点：</h5><p>频繁的需求变化会使开发过程难于管理和控制</p>
+<p>原型的快速开发和修改对技术要求比较高，需要较好的工作基础</p>
+<h4 id="增量模型的优缺点"><a href="#增量模型的优缺点" class="headerlink" title="增量模型的优缺点"></a>增量模型的优缺点</h4><h5 id="优点：-2"><a href="#优点：-2" class="headerlink" title="优点："></a>优点：</h5><p>能在较短的时间内向用户提交部分功能的构件</p>
+<p>逐步增加产品功能可以使用户有较充裕的时间学习和适应新产品，减少一个全新软件可能给用户带来的冲击</p>
+<h5 id="缺点：-2"><a href="#缺点：-2" class="headerlink" title="缺点："></a>缺点：</h5><p>增量构件的划分依赖于系统功能的构成和软件开发人员的经验</p>
+<p>要求软件系统的体系结构具有高度的可扩充性和开放性</p>
+<h4 id="螺旋周期的优缺点"><a href="#螺旋周期的优缺点" class="headerlink" title="螺旋周期的优缺点"></a>螺旋周期的优缺点</h4><h5 id="特点：-1"><a href="#特点：-1" class="headerlink" title="特点："></a>特点：</h5><p>瀑布模型+快速原型+风险分析</p>
+<p>迭代过程</p>
+<h5 id="优点：-3"><a href="#优点：-3" class="headerlink" title="优点："></a>优点：</h5><p>强调可选方案和约束条件有利于已有软件的重用</p>
+<p>有助于把软件质量作为软件开发的一个重要目标</p>
+<p>减少过多测试或测试不足带来的风险</p>
+<p>维护只是模型的另一个周期，在维护和开发之间并没有本质区别</p>
+<h5 id="缺点：-3"><a href="#缺点：-3" class="headerlink" title="缺点："></a>缺点：</h5><p>需耗费大量资金和时间用于风险评估</p>
+<p>要求开发人员具有丰富风险评估经验和有关知识</p>
+<p>开发过程比较复杂</p>
+<p>给过程管理和控制带来了一定的难度</p>
+<h4 id="可行性研究的内容"><a href="#可行性研究的内容" class="headerlink" title="可行性研究的内容"></a>可行性研究的内容</h4><p><strong>(1)</strong> 技术可行性</p>
+<p><strong>(2)</strong> 经济可行性</p>
+<p><strong>(3)</strong> 操作可行性</p>
+<p><strong>(4)</strong> 社会可行性(法律可行性)</p>
+<p><strong>(5)</strong> 抉择</p>
+<h4 id="技术可行性及需要考虑的问题"><a href="#技术可行性及需要考虑的问题" class="headerlink" title="技术可行性及需要考虑的问题"></a>技术可行性及需要考虑的问题</h4><p>度量一个特定技术信息系统解决方案的实用性及技术资源的可用性</p>
+<h5 id="考虑的问题"><a href="#考虑的问题" class="headerlink" title="考虑的问题"></a>考虑的问题</h5><p>(1)开发风险分析</p>
+<p>(2)资源分析</p>
+<p>(3)相关技术的发展（现有技术能否实现新系统，技术难点、建议采用技术的先进性）</p>
+<h4 id="经济可行性及需要考虑的问题"><a href="#经济可行性及需要考虑的问题" class="headerlink" title="经济可行性及需要考虑的问题"></a>经济可行性及需要考虑的问题</h4><p>度量系统解决方案的性能价格比</p>
+<h5 id="考虑的问题-1"><a href="#考虑的问题-1" class="headerlink" title="考虑的问题"></a>考虑的问题</h5><h5 id="成本-x2F-效益分析（开发、运行的成本-x2F-效益）"><a href="#成本-x2F-效益分析（开发、运行的成本-x2F-效益）" class="headerlink" title="成本/效益分析（开发、运行的成本/效益）"></a>成本/效益分析（开发、运行的成本/效益）</h5><p>有形成本、效益</p>
+<p>无形成本、效益</p>
+<h5 id="价值和成本的关系"><a href="#价值和成本的关系" class="headerlink" title="价值和成本的关系"></a>价值和成本的关系</h5><p>质量与价值、成本的关系</p>
+<p>价值/成本的均衡</p>
+<h4 id="操作可行性"><a href="#操作可行性" class="headerlink" title="操作可行性"></a>操作可行性</h4><p>用户使用可能性</p>
+<p>时间进度可行性</p>
+<p>组织和文化上的可行性</p>
+<h4 id="可行性研究过程"><a href="#可行性研究过程" class="headerlink" title="可行性研究过程"></a>可行性研究过程</h4><p>复查系统规模和目标</p>
+<p>研究目前正在使用的系统</p>
+<p>导出新系统的高层逻辑模型</p>
+<p>进一步定义问题</p>
+<p>导出和评价供选择的解法</p>
+<p>推荐行动方针</p>
+<p>草拟开发计划</p>
+<p>书写文档提交审查</p>
+<h4 id="软件设计概述"><a href="#软件设计概述" class="headerlink" title="软件设计概述"></a>软件设计概述</h4><p>主要介绍软件设计的一般概念，包括软件设计的任务、基本原理、模块化设计和设计文档等内容。其中这些概念是用于任何的开发方法和开发过程。</p>
+<h5 id="软件设计的任务"><a href="#软件设计的任务" class="headerlink" title="软件设计的任务"></a>软件设计的任务</h5><p>把分析阶段产生的软件需求说明转换为用适当手段表示软件设计文档</p>
+<h5 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h5><p>数据设计（信息模型）体系结构设计（定义软件主要组成部件之间的关系）接口设计（软件内部、外部与人之间的通信（数据流和控制流））过程设计（将软件体系结构的组成部分转变为对软件组件的过程性描述）</p>
+<h5 id="模块（Module）"><a href="#模块（Module）" class="headerlink" title="模块（Module）"></a>模块（Module）</h5><p>是一个拥有明确定义的输入、输出和特征的程序实体。如函数、过程、子程序、宏等</p>
+<h5 id="软件构件（SoftwareComponent）"><a href="#软件构件（SoftwareComponent）" class="headerlink" title="软件构件（SoftwareComponent）"></a>软件构件（SoftwareComponent）</h5><p>可重复使用的软件组件，现有的可复用构件，大多是在对象的基础上创建的。</p>
+<h5 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h5><p>提取客观事件中一群事物的某些本质共性，而暂时忽略他们的非本质的细节，是一个从特殊到一般的过程。分层次考虑和处理问题（数据和过程）。</p>
+<h6 id="过程抽象："><a href="#过程抽象：" class="headerlink" title="过程抽象："></a>过程抽象：</h6><p>把完成一个特定功能的动作序列抽象为一个过程名和参数表，以后通过指定过程名和实际参数调用此过程。</p>
+<h6 id="数据抽象："><a href="#数据抽象：" class="headerlink" title="数据抽象："></a>数据抽象：</h6><p>把一个数据对象的定义抽象为一个数据类型名，用此类型名可以定义多个具有相同性质的数据对象。</p>
+<h5 id="信息隐藏"><a href="#信息隐藏" class="headerlink" title="信息隐藏"></a>信息隐藏</h5><h6 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h6><p>把系统分解为模块时应遵守的指导思想</p>
+<h6 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h6><p>模块内部的数据和过程，不需要这些信息的模块不可访问；每一个模块只完成一个相对独立的特定功能；模块之间渐渐交换那些完成系统功能必须交换的信息。</p>
+<h6 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h6><p>提高模块的独立性，当修改或者维护模块时减少把一个模块的错误扩散到其他模块中去的机会。</p>
+<h4 id="模块化设计"><a href="#模块化设计" class="headerlink" title="模块化设计"></a>模块化设计</h4><h5 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h5><p>把大型软件按照规定的原则划分成一个个较小的相对独立但又相互关联的模块。</p>
+<h5 id="指导思想："><a href="#指导思想：" class="headerlink" title="指导思想："></a>指导思想：</h5><p>分解；模块独立化</p>
+<h5 id="内容："><a href="#内容：" class="headerlink" title="内容："></a>内容：</h5><p>分解；模块独立性；自顶向下与由底向上</p>
+<h5 id="内聚"><a href="#内聚" class="headerlink" title="内聚"></a>内聚</h5><p>低内聚 中内聚 高内聚 逻辑性内聚 通信性内聚</p>
+<h5 id="耦合"><a href="#耦合" class="headerlink" title="耦合"></a>耦合</h5><p>弱耦合 中耦合 较强耦合 强耦合</p>
+<h5 id="复审"><a href="#复审" class="headerlink" title="复审"></a>复审</h5><p>概要设计复审</p>
+<p>系统的总体结构，模块划分，内外接口</p>
+<p>详细设计复审</p>
+<p>各个模块的具体设计</p>
+<h5 id="复审的方式"><a href="#复审的方式" class="headerlink" title="复审的方式"></a>复审的方式</h5><p>正式复审</p>
+<p>非正式复审</p>
+<p>走查</p>
+<h4 id="面向数据流设计"><a href="#面向数据流设计" class="headerlink" title="面向数据流设计"></a>面向数据流设计</h4><p>将信息流映射成软件结构，数据流是考虑一切问题的出发点，最终目的是</p>
+<h6 id="给出设计软件结构的一个系统化的途径"><a href="#给出设计软件结构的一个系统化的途径" class="headerlink" title="给出设计软件结构的一个系统化的途径"></a>给出设计软件结构的一个系统化的途径</h6><p>数据流的类型决定映射方法</p>
+<h6 id="变换流"><a href="#变换流" class="headerlink" title="变换流"></a>变换流</h6><h6 id="事务流"><a href="#事务流" class="headerlink" title="事务流"></a>事务流</h6><p>该方法适用于概要设计阶段</p>
+<p>常称为结构化设计（SD）方法</p>
+<h4 id="面向数据设计"><a href="#面向数据设计" class="headerlink" title="面向数据设计"></a>面向数据设计</h4><p>该方法不明显的使用软件结构的概念，模块是设计过程的副产品。对于模块独立性也没有给予应有的重视</p>
+<p>以数据结构作为分析和设计的基础</p>
+<p>最终目标</p>
+<h6 id="得出程序的过程性描述"><a href="#得出程序的过程性描述" class="headerlink" title="得出程序的过程性描述"></a>得出程序的过程性描述</h6><p>该方法适用于过程设计/详细设计阶段</p>
+<p>主要涉及方法</p>
+<h6 id="Jackson方法"><a href="#Jackson方法" class="headerlink" title="Jackson方法"></a>Jackson方法</h6><h6 id="Warnier方法"><a href="#Warnier方法" class="headerlink" title="Warnier方法"></a>Warnier方法</h6><h4 id="结构化设计与结构化分析的关系"><a href="#结构化设计与结构化分析的关系" class="headerlink" title="结构化设计与结构化分析的关系"></a>结构化设计与结构化分析的关系</h4><p>软件设计必须依据对软甲你的需求来进行，结构化分析的结果为结构化设计提供了最基本的输入信息</p>
+<p>分析模型的每个元素都提供了创建设计模型时候所需要的信息</p>
+<p>数据设计吧分析阶段创建的信息域模型转变成显示软件所需要的数据结构</p>
+<p>体系结构设计确定了程序设计的主要结构元素（即程序构建）之间的关系</p>
+<p>接口设计的结构描述了软件内部、软件与协作系统之间以及软件与使用者之间的通信方式</p>
+<p>过程设计把程序体系结构中的结构元素，变换成对软件构件的过程性描述</p>
+<p>在软件设计期间我们所作出的决策，将最终决定软件开发能否成功，更重要的是，这些设计决策将决定软件维护的难易程度</p>
+<h4 id="SC图"><a href="#SC图" class="headerlink" title="SC图"></a>SC图</h4><h5 id="SC图的组成符号"><a href="#SC图的组成符号" class="headerlink" title="SC图的组成符号"></a>SC图的组成符号</h5><p>矩形框来表示模块</p>
+<p>带箭头的连线表示模块间的调用关系</p>
+<p>在调用线的两旁标出传入和传出模块的数据流</p>
+<h5 id="SC图中的模块符号"><a href="#SC图中的模块符号" class="headerlink" title="SC图中的模块符号"></a>SC图中的模块符号</h5><p>传入；传出；变换；源；漏；控制</p>
+<h5 id="SC图中的模块调用"><a href="#SC图中的模块调用" class="headerlink" title="SC图中的模块调用"></a>SC图中的模块调用</h5><p>简单调用：调用线的箭头指向被调用的模块</p>
+<p>选择调用：图中用菱形符号表示选择</p>
+<p>循环调用：用叠加在调用线初始端的环形箭头表示循环</p>
+<p>在结构图中通常还用带注释的箭头表示模块调用过程中来回传递的信息。如果希望进一步标明传递的信息是数据还是控制信息，则可以利用注释箭头尾部的形状来区分：尾部是空心圆表示传递的是数据，实心圆表示传递的是控制信息</p>
+<p><strong>层次图和结构图并不严格表示模块的调用次序。</strong></p>
+<p><strong>层次图和结构图并不指明什么时候调用下层模块。</strong> </p>
+<p> 通常用层次图作为描绘软件结构的文档。结构图作为文档并不合适。但是，利用IPO图和数据字典中的信息得到模块调用时传递的信息，从而由层次图导出结构图的过程，却可以作为检察设计正确性和评价模块独立性的好方法。</p>
+<h4 id="变换型结构"><a href="#变换型结构" class="headerlink" title="变换型结构"></a>变换型结构</h4><p>变换中心：通过计算或者处理，将系统的传入流变为传出流。又称为加工中心。传入流：离输入始端最远但是仍然可以被看做系统输入的那些数据流。输出流：离输出末端最远但仍可以被看作系统输出的那些数据流。</p>
+<h4 id="变换映射"><a href="#变换映射" class="headerlink" title="变换映射"></a>变换映射</h4><p>适用于将变换型结构的DFD图转换为初始软件结构图</p>
+<p>区分传出、传入和变换中心三个部分，在DFD图上表明它们的分界线</p>
+<p>变换中心的任务：通过计算或者处理，把系统的逻辑输入变换（或加工）为系统的逻辑输出</p>
+<p>逻辑输入（传入数据项）：离物理输入端（输入始端）最远，但仍然可以被看作是系统输入的那些数据流。</p>
+<p>逻辑输出（传出数据项）：离物理输出端（输出末端）最远，但是仍可以被看作系统输出的那些数据流。数据在系统中流动的时候，不仅咋痛殴该国变化中心时要被变换，在传入路径和传出路径上，其内容和形式也可能发生变化。故变换中心又称为“中心加工”，以区别于数据在传入传出过程中的其他加工</p>
+<p>划分的结构可能会受经验的影响，但是必须从实际情况出发，对DFD图作认真和细致的分析</p>
+<h5 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h5><p>有些系统没有中心加工，系统的逻辑输入和逻辑输出是完全仙童的数据流，应该将DFD划分为传入和传出两本分，不要强求一律硬分成为三个部分。</p>
+<p>除了传入部份外，在变化中心甚至传出部分也可能从系统外接受某些输入数据流，成为二次传入数据。该数据不应当做传入部分的一部分。</p>
+<p>有些DFD图可能失之太粗，缺少应有的细节，可考虑对自己用于分析的DFD进行补充。</p>
+<h4 id="事务映射"><a href="#事务映射" class="headerlink" title="事务映射"></a>事务映射</h4><p>虽然在任何请胯下都可以使用变换分析方法设计软件结构，但是在数据流具有明显的事务特点时，也就是有一个明显的“发射中心”（事务中心）时，还是以采用事务分析方法为宜</p>
+<p>事务：引发、触发或者启动某一动作或者一串动作的任何数据、控制、信号、事件或者状态的变化。</p>
+<h5 id="事务分析步骤："><a href="#事务分析步骤：" class="headerlink" title="事务分析步骤："></a>事务分析步骤：</h5><p>1.在DFD图上确定事务中心、接收部分（包括接受路径）和发送部分（包括全部动作路径）</p>
+<p>事务中心通常位于DFD图中多条动作路径的起点；向事务中心提供信息的路径，是系统的接受路径；</p>
+<p>动作路径通常不止一条，切每条均具有自己的结构特性（变换或事务型）</p>
+<p>2.画出SC图的框架，把DFD图的三个部分分别映射为事务控制模块、接收模块和动作发送模块</p>
+<p>3.分解和细化接收和发送分支，完成初始的SC图</p>
+<p>接受分支一般具有变换特性，可对其进行变换分析；</p>
+<p>动作分支经典的可映射为4层：处理层、事务层、操作层、细节层、</p>
+<p>在大型系统的DFD中，变换型和事务型两类结构往往同时存在。对于一个大系统，常常把变换分析和事务分析应用到同一个数据流图的不同部分，由此可得到的子结构形成“构建”，可以利用他们构建完整的软件结构。</p>
+<h5 id="改进软件结构提高模块独立性"><a href="#改进软件结构提高模块独立性" class="headerlink" title="改进软件结构提高模块独立性"></a>改进软件结构提高模块独立性</h5><p>通过模块分解或合并，力求降低耦合提高内聚</p>
+<h5 id="模块规模应该适中"><a href="#模块规模应该适中" class="headerlink" title="模块规模应该适中"></a>模块规模应该适中</h5><p>过大，可考虑继续分解模块功能，过小，可考虑合并到上层模块。</p>
+<h4 id="深度、宽度、扇出和扇入都应适当"><a href="#深度、宽度、扇出和扇入都应适当" class="headerlink" title="深度、宽度、扇出和扇入都应适当"></a>深度、宽度、扇出和扇入都应适当</h4><h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5><p>深度：软件结构中控制的层数，往往粗略的标志一个系统的大小和复杂程度。越大，意味着模块功能可能过分简单，软件的程序控制复杂</p>
+<p>宽度：软件结构内同一个层次上的模块总数的最大值。快读越大系统越复杂</p>
+<p>扇出：模块直接调用的下级模块数目，也成为模块的控制宽度</p>
+<p>扇入：直接调用他的上级模块数</p>
+<h4 id="模块的作用域应该在控制域之内"><a href="#模块的作用域应该在控制域之内" class="headerlink" title="模块的作用域应该在控制域之内"></a>模块的作用域应该在控制域之内</h4><h5 id="两个范围的定义"><a href="#两个范围的定义" class="headerlink" title="两个范围的定义"></a>两个范围的定义</h5><p>控制范围：包括模块自身及其下属模块，不论这些模块系统由该模块直接调用，还是间接调用</p>
+<p>作用范围：是一个与条件判定相联系的概念，指模块内的某条件判定涉及的直接调用和间接调用模块。</p>
+<p>一般情况，一个盘底你个作用范围内的模块可能会有三种情况</p>
+<h6 id="整个模块是否执行，依赖于判定的结果"><a href="#整个模块是否执行，依赖于判定的结果" class="headerlink" title="整个模块是否执行，依赖于判定的结果"></a>整个模块是否执行，依赖于判定的结果</h6><h6 id="上述模块的下属模块"><a href="#上述模块的下属模块" class="headerlink" title="上述模块的下属模块"></a>上述模块的下属模块</h6><h6 id="模块内有部分功能的执行依赖于这一判定"><a href="#模块内有部分功能的执行依赖于这一判定" class="headerlink" title="模块内有部分功能的执行依赖于这一判定"></a>模块内有部分功能的执行依赖于这一判定</h6><h5 id="作用范围-x2F-控制范围原则"><a href="#作用范围-x2F-控制范围原则" class="headerlink" title="作用范围/控制范围原则"></a>作用范围/控制范围原则</h5><p>把一个判定的作用范围限制在判定所在模块的控制范围之内，是改进模块结构的基本原则</p>
+<p>理想情况，是使判定的作用范围和判定所在模块的控制范围尽可能的吻合</p>
+<h5 id="把系统中有较大影响的判定放在层次结构中较低的位置，可能是导致违反作用范围-x2F-控制范围原则的主要原因。"><a href="#把系统中有较大影响的判定放在层次结构中较低的位置，可能是导致违反作用范围-x2F-控制范围原则的主要原因。" class="headerlink" title="把系统中有较大影响的判定放在层次结构中较低的位置，可能是导致违反作用范围/控制范围原则的主要原因。"></a>把系统中有较大影响的判定放在层次结构中较低的位置，可能是导致违反作用范围/控制范围原则的主要原因。</h5><p>所以要么把这类重要的判定从低层次上移到做够高的上层模块中，要么把受这些判定影响的模块调整并向下移动到控制范围之内</p>
+<h5 id="力争降低模块接口的复杂程度"><a href="#力争降低模块接口的复杂程度" class="headerlink" title="力争降低模块接口的复杂程度"></a>力争降低模块接口的复杂程度</h5><p>模块接口复杂是软件发生错误的一个主要原因。设计接口时，应使得信息传递简单并且和模块的功能一致。</p>
+<p>接口复杂或者不一致（即看起来传递的数据之间没有联系），是紧耦合或者低内聚的征兆，应该重新分析这个模块的独立性。</p>
+<h5 id="设计单入口单出口的模块"><a href="#设计单入口单出口的模块" class="headerlink" title="设计单入口单出口的模块"></a>设计单入口单出口的模块</h5><p>不要涉及内容耦合模块</p>
+<h5 id="模块功能应该可以预测"><a href="#模块功能应该可以预测" class="headerlink" title="模块功能应该可以预测"></a>模块功能应该可以预测</h5><p>模块的功能应该能够预测，但也要防止模块功能过分局限。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">wHCat</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://wHCat0530.github.io/2022/09/09/ruan-jian-gong-cheng-bi-ji/">http://wHCat0530.github.io/2022/09/09/ruan-jian-gong-cheng-bi-ji/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">wHCat</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">
+                                    <span class="chip bg-color">软件工程</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/11/25/c-han-shu-zheng-li/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="C++函数整理">
+                        
+                        <span class="card-title">C++函数整理</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C/" class="post-category">
+                                    C++
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/09/05/unity-you-xi-kai-fa-time-han-shu-miao-shu-zheng-li/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Unity游戏开发Time函数描述整理">
+                        
+                        <span class="card-title">Unity游戏开发Time函数描述整理</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            文章内容源自于Unity中文开发文档Time数学函数集合，内容包括一些个人理解以及中文文档包含案例以及个人修改案例
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Unity/" class="post-category">
+                                    Unity
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C#</span>
+                    </a>
+                    
+                    <a href="/tags/Unity/">
+                        <span class="chip bg-color">Unity</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">游戏开发</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="593617579"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022</span>
+            
+            <a href="/about" target="_blank">wHCat</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">20.1k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wHCat0530" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:wHCat0530@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=8142961" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 8142961" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <script type="text/javascript">
+        var OriginTitile=document.title,st;
+        document.addEventListener("visibilitychange",function(){
+            document.hidden?(document.title="怎么不看我了呢？';",clearTimeout(st)):(document.title="(Ő∀Ő3)ノ欢迎回来！",st=setTimeout(function(){document.title=OriginTitile},3e3))
+        })
+    </script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
