@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="C++日期与时间, Rosmarinus丶L">
-    <meta name="description" content="">
+    <meta name="description" content="C++日期与时间在C++的标准库中并没有提供所谓的日期类型。C++继承了C语言用于日期和时间操作的结构和函数。为了使用日期和时间的相关函数和结构吗，需要在C++程序中引用头文件。
+有四个与时间相关的类型：clock_t、time_t、siz">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -373,14 +374,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    939
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -403,7 +404,137 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h5 id="C-日期与时间"><a href="#C-日期与时间" class="headerlink" title="C++日期与时间"></a>C++日期与时间</h5><p>在C++的标准库中并没有提供所谓的日期类型。C++继承了C语言用于日期和时间操作的结构和函数。为了使用日期和时间的相关函数和结构吗，需要在C++程序中引用<ctime>头文件。</ctime></p>
+<p>有四个与时间相关的类型：clock_t、time_t、size_t和tm。类型clock_t、size_t和time_t能够把系统时间和日期表示为某种整数。</p>
+<p>结构类型tm把日期和时间以C结构的形式保存，tm结构的定义如下：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">tm</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">int</span> tm_sec<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> tm_min<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> tm_hour<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> tm_mday<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> tm_mon<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> tm_year<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> tm_wday<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> tm_yday<span class="token punctuation">;</span>
+	<span class="token keyword">int</span> tm_isdst<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以下是C/C++中关于日期和时间的重要函数。所有这些函数都是C/C++标准库的组成部分，用户可以在C++标准库中查看各个函数的细节</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>time_t time(time_t*time);</td>
+<td>该函数返回系统的当前日历时间，如果不可用则返回1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>char*ctime(const time_*time);</td>
+<td>该函数返回一个表示当地时间的字符串指针</td>
+</tr>
+<tr>
+<td>3</td>
+<td>struct tm*localtime(const time_t*time);</td>
+<td>该函数返回一个指向表示本地时间的tm结构的指针</td>
+</tr>
+<tr>
+<td>4</td>
+<td>clock_t clock(void);</td>
+<td>该函数返回程序执行起（一般为程序的开头），处理器时间所使用的时间，如果不可用则返回1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>char * asctime(const struct tm*time);</td>
+<td>该函数返回一个指向字符串的指针，字符串包含了time所指向结构中存储的信息</td>
+</tr>
+<tr>
+<td>6</td>
+<td>struct tm*gmtime(const time_t*time);</td>
+<td>该函数返回一个指向time的指针，time为tm结构，用协调世界时（UTC）也被称为格林尼治标准时间（GMT）表示</td>
+</tr>
+<tr>
+<td>7</td>
+<td>time_t mktime(struct tm *time);</td>
+<td>该函数返回日历时间，详单与time所指向结构中存储的时间</td>
+</tr>
+<tr>
+<td>8</td>
+<td>double difftime(time_t time2,time_t time1);</td>
+<td>该函数返回time1和time2之间相差的秒数</td>
+</tr>
+<tr>
+<td>9</td>
+<td>size_t sttrftime();</td>
+<td>该函数可用于格式化日期和时间为指定的格式</td>
+</tr>
+</tbody></table>
+<h6 id="当前时间和日期"><a href="#当前时间和日期" class="headerlink" title="当前时间和日期"></a>当前时间和日期</h6><p>下面的实例可以用来获取当前系统的日期和时间，包括本地时间和协调世界时（UTC）</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;ctime&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// 基于当前系统的当前日期/时间</span>
+	time_t now <span class="token operator">=</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token comment">// 把now转换为字符串类型</span>
+	<span class="token keyword">char</span> <span class="token operator">*</span>dt <span class="token operator">=</span> <span class="token function">ctime</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>now<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"本地日期和时间:"</span> <span class="token operator">&lt;&lt;</span> dt <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+	
+	<span class="token comment">// 把now转换为tm结构</span>
+	tm <span class="token operator">*</span>gmtm <span class="token operator">=</span> <span class="token function">gmtime</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>now<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	dt <span class="token operator">=</span> <span class="token function">asctime</span><span class="token punctuation">(</span>gmtm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"UTC日期和时间"</span> <span class="token operator">&lt;&lt;</span> dt <span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上述代码执行后产生的结果如下：</p>
+<blockquote>
+<p>本地日期和时间: Sat Jan 8 20:07:41 2011</p>
+<p>UTC日期和时间: Sun Jan 9 03:07 41 2011</p>
+</blockquote>
+<h6 id="使用结构tm格式化时间"><a href="#使用结构tm格式化时间" class="headerlink" title="使用结构tm格式化时间"></a>使用结构tm格式化时间</h6><p>tm结构在C/C++中处理日期和时间相关的操作时，显得尤为重要。tm结构以C结构的形式保存日期和时间。大多数与时间相关的函数都是用了tm结构。下面的实例使用了tm结构和各种与日期和时间相关的函数。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">included</span><span class="token expression"><span class="token operator">&lt;</span>ctime<span class="token operator">&gt;</span></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// 基于当前系统的当前日期/时间</span>
+	time_t now <span class="token operator">=</span> <span class="token function">time</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"1970到目前经过秒数:"</span> <span class="token operator">&lt;&lt;</span> now <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+	
+	tm <span class="token operator">*</span>ltm <span class="token operator">=</span> <span class="token function">localtime</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>now<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token comment">// 输出tm结构的各个组成部分</span>
+	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"年:"</span> <span class="token operator">&lt;&lt;</span> <span class="token number">1900</span> <span class="token operator">+</span> ltm <span class="token operator">-&gt;</span> tm_year <span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"月:"</span> <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">+</span> ltm <span class="token operator">-&gt;</span>tm_mon <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"日:"</span> <span class="token operator">&lt;&lt;</span> ltm <span class="token operator">-&gt;</span> tm_mday <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"时间:"</span> <span class="token operator">&lt;&lt;</span>ltm <span class="token operator">-&gt;</span> tm_hour <span class="token operator">&lt;&lt;</span> <span class="token string">":"</span><span class="token punctuation">;</span>
+	cout <span class="token operator">&lt;&lt;</span> ltm <span class="token operator">-&gt;</span> tm_min <span class="token operator">&lt;&lt;</span> <span class="token string">":"</span><span class="token punctuation">;</span>
+	cout <span class="token operator">&lt;&lt;</span> ltm <span class="token operator">-&gt;</span> tm_sec <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当上面的代码被执行的时候生成结果如下</p>
+<blockquote>
+<p>1900到目前时间:1503565157</p>
+<p>年:2017</p>
+<p>月:8</p>
+<p>日:24</p>
+<p>时间:16:42:37</p>
+</blockquote>
+
                 
             </div>
             <hr/>
@@ -547,18 +678,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/11/26/c-ri-qi-yu-shi-jian/">
+                <a href="/2022/11/27/c-ji-ben-shu-ju-jie-gou/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C++日期与时间">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="C++基本数据结构">
                         
-                        <span class="card-title">C++日期与时间</span>
+                        <span class="card-title">C++基本数据结构</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -568,9 +698,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -583,12 +713,15 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/C/">
                         <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
                     </a>
                     
                 </div>
@@ -753,7 +886,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">20.4k</span>
+                        class="white-color">22.8k</span>
             
             
             
